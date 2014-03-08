@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{1fc2688d-c175-4ad9-bc5f-7b75ff3bfd36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Test">
+      <UniqueIdentifier>{bd078956-d4f8-4b66-9d34-494f01cc0638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\ID Allocation">
+      <UniqueIdentifier>{2cfc3564-1df8-4ede-9db3-6ff66c7645c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tree">
+      <UniqueIdentifier>{8ef15f2c-2336-49b0-8095-ef66b1ca5682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Tree\Red-black">
+      <UniqueIdentifier>{8b119f77-def1-4b72-90a1-fa9ec38bfe39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Collections">
+      <UniqueIdentifier>{71f5a3b9-25f2-401c-b462-37865ea6c61c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Allocator">
+      <UniqueIdentifier>{7dbfb011-a27f-44ef-a5c7-b18ef1f33c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Value">
+      <UniqueIdentifier>{c870b450-7a79-440b-a445-5b8e46e0f0e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Value\Definitions">
+      <UniqueIdentifier>{45cdf4ee-2a3f-4317-a681-262546497aa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Memory">
+      <UniqueIdentifier>{878ebde8-3f4e-4d3c-a3ab-18e4ad0950b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Memory\Traits">
+      <UniqueIdentifier>{9921e43f-5834-432e-9852-238b5a2622f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Memory\Compound">
+      <UniqueIdentifier>{c4caeb66-df7a-4eed-8aed-af9cc3732788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Memory\Multibuffer">
+      <UniqueIdentifier>{0533f9e8-e43d-4358-b153-74df7ccd119a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Branching">
+      <UniqueIdentifier>{df7d4eac-b22b-44c6-b879-6cf04725cee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Type">
+      <UniqueIdentifier>{574d52b1-b791-417b-8756-6873988f8724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\XML">
+      <UniqueIdentifier>{ec23dc80-0891-444c-8171-206d4ddfa75e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Runtime\Test\Test.h">
+      <Filter>Sources\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\Trait.h">
+      <Filter>Sources\ID Allocation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\Default.h">
+      <Filter>Sources\ID Allocation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\DefaultDefinition.h">
+      <Filter>Sources\ID Allocation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\CountingDefinition.h">
+      <Filter>Sources\ID Allocation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\Counting.h">
+      <Filter>Sources\ID Allocation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\NodeDefinition.h">
+      <Filter>Sources\Tree\Red-black</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\Default.h">
+      <Filter>Sources\Tree\Red-black</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\DefaultDefinition.h">
+      <Filter>Sources\Tree\Red-black</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\Test.h">
+      <Filter>Sources\Tree\Red-black</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\TestDefinition.h">
+      <Filter>Sources\Tree\Red-black</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Collections\VectorAlgorithms.h">
+      <Filter>Sources\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Collections\VectorAlgorithmsDefinition.h">
+      <Filter>Sources\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Allocator\Default.h">
+      <Filter>Sources\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Allocator\DefaultDefinition.h">
+      <Filter>Sources\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Allocator\Test.h">
+      <Filter>Sources\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Allocator\TestDefinition.h">
+      <Filter>Sources\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\Vector.h">
+      <Filter>Sources\Value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\Uuid.h">
+      <Filter>Sources\Value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\Map.h">
+      <Filter>Sources\Value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Runtime.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\Scalar.h">
+      <Filter>Sources\Value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\Container.h">
+      <Filter>Sources\Value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\Trait.h">
+      <Filter>Sources\Value</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\MapDefinition.h">
+      <Filter>Sources\Value\Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\ScalarDefinition.h">
+      <Filter>Sources\Value\Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Value\ContainerDefinition.h">
+      <Filter>Sources\Value\Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\CommonRequirements.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Trait.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Malloc.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\MallocDefinition.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\BufferDefinition.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Buffer.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Allocation.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\AllocationDefinition.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Test.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\TestDefinition.h">
+      <Filter>Sources\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\Alloc.h">
+      <Filter>Sources\Memory\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\AllocDefinition.h">
+      <Filter>Sources\Memory\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\Map.h">
+      <Filter>Sources\Memory\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\ReadWrite.h">
+      <Filter>Sources\Memory\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\Info.h">
+      <Filter>Sources\Memory\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Alloc.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\AllocDefinition.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Base.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\MapDefinition.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Map.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\ReadWrite.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\ReadWriteDefinition.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Info.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\InfoDefinition.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\Alloc.h">
+      <Filter>Sources\Memory\Multibuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\AllocDefinition.h">
+      <Filter>Sources\Memory\Multibuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\Default.h">
+      <Filter>Sources\Memory\Multibuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\DefaultDefinition.h">
+      <Filter>Sources\Memory\Multibuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Compound.h">
+      <Filter>Sources\Memory\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Branching\Default.h">
+      <Filter>Sources\Branching</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Branching\DefaultDefinition.h">
+      <Filter>Sources\Branching</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Branching\Test.h">
+      <Filter>Sources\Branching</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Branching\TestDefinition.h">
+      <Filter>Sources\Branching</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\Trait.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\TraitDefinition.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\Atom.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\Struct.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\Matrix.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\XMLLoader.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\Test.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Type\TestDefinition.h">
+      <Filter>Sources\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\XML\Parser.h">
+      <Filter>Sources\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\XML\ElementProcessor.h">
+      <Filter>Sources\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\XML\Subroutines.h">
+      <Filter>Sources\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Debug.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\DebugDefinition.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Exception.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Log.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Object.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Option.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Range.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Platform.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Subroutines.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Observable.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Versioned.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Runtime\Either.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Runtime\Test\Test.cpp">
+      <Filter>Sources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Value\Map.cpp">
+      <Filter>Sources\Value\Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Value\Uuid.cpp">
+      <Filter>Sources\Value\Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Value\Vector.cpp">
+      <Filter>Sources\Value\Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Value\Trait.cpp">
+      <Filter>Sources\Value\Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\XML\Subroutines.cpp">
+      <Filter>Sources\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Debug.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Object.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Subroutines.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

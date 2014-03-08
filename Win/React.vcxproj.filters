@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Transform">
+      <UniqueIdentifier>{b87be41e-8f44-45fc-86b7-2500e143e267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transform\Logic">
+      <UniqueIdentifier>{f4591691-b2c8-4a10-ba65-c9b15073ac62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\React\React.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Value.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\Animation.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\Transform.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\DampedOscillator.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\Multiply.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\Inverse.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\Transpose.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\SubMatrix.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\InverseTranspose.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\Translation.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\Negate.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Transform\MultiplyByScalar.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\And.h">
+      <Filter>Source Files\Transform\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\React\Add.h">
+      <Filter>Source Files\Transform</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\React\Value.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

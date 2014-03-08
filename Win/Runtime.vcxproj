@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Runtime\Allocator\Default.h" />
+    <ClInclude Include="..\Sources\Runtime\Allocator\DefaultDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Allocator\Test.h" />
+    <ClInclude Include="..\Sources\Runtime\Allocator\TestDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Branching\Default.h" />
+    <ClInclude Include="..\Sources\Runtime\Branching\DefaultDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Branching\Test.h" />
+    <ClInclude Include="..\Sources\Runtime\Branching\TestDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Collections\VectorAlgorithms.h" />
+    <ClInclude Include="..\Sources\Runtime\Collections\VectorAlgorithmsDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Debug.h" />
+    <ClInclude Include="..\Sources\Runtime\DebugDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Either.h" />
+    <ClInclude Include="..\Sources\Runtime\Exception.h" />
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\Counting.h" />
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\CountingDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\Default.h" />
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\DefaultDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\IDAllocator\Trait.h" />
+    <ClInclude Include="..\Sources\Runtime\Log.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Allocation.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\AllocationDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Buffer.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\BufferDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\CommonRequirements.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Alloc.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\AllocDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Base.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Compound.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Info.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\InfoDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\Map.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\MapDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\ReadWrite.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Compound\ReadWriteDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Malloc.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\MallocDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\Alloc.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\AllocDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\Default.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Multibuffer\DefaultDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Test.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\TestDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Trait.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\Alloc.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\AllocDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\Info.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\Map.h" />
+    <ClInclude Include="..\Sources\Runtime\Memory\Traits\ReadWrite.h" />
+    <ClInclude Include="..\Sources\Runtime\Object.h" />
+    <ClInclude Include="..\Sources\Runtime\Observable.h" />
+    <ClInclude Include="..\Sources\Runtime\Option.h" />
+    <ClInclude Include="..\Sources\Runtime\Range.h" />
+    <ClInclude Include="..\Sources\Runtime\Runtime.h" />
+    <ClInclude Include="..\Sources\Runtime\Subroutines.h" />
+    <ClInclude Include="..\Sources\Runtime\Test\Test.h" />
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\Default.h" />
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\DefaultDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\NodeDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\Test.h" />
+    <ClInclude Include="..\Sources\Runtime\Tree\RB\TestDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Platform.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\Atom.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\Matrix.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\Struct.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\Test.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\TestDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\Trait.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\TraitDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Type\XMLLoader.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\Container.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\ContainerDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\Map.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\MapDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\Scalar.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\ScalarDefinition.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\Trait.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\Uuid.h" />
+    <ClInclude Include="..\Sources\Runtime\Value\Vector.h" />
+    <ClInclude Include="..\Sources\Runtime\Versioned.h" />
+    <ClInclude Include="..\Sources\Runtime\XML\ElementProcessor.h" />
+    <ClInclude Include="..\Sources\Runtime\XML\Parser.h" />
+    <ClInclude Include="..\Sources\Runtime\XML\Subroutines.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Runtime\Debug.cpp" />
+    <ClCompile Include="..\Sources\Runtime\Object.cpp" />
+    <ClCompile Include="..\Sources\Runtime\Subroutines.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Test\Test.cpp" />
+    <ClCompile Include="..\Sources\Runtime\Value\Map.cpp" />
+    <ClCompile Include="..\Sources\Runtime\Value\Trait.cpp" />
+    <ClCompile Include="..\Sources\Runtime\Value\Uuid.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Runtime\Value\Vector.cpp" />
+    <ClCompile Include="..\Sources\Runtime\XML\Subroutines.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EA27C063-A13A-453D-8B32-92B6832E0941}</ProjectGuid>
+    <RootNamespace>Runtime</RootNamespace>
+    <ProjectName>Library</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>Runtime</TargetName>
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>Runtime</TargetName>
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>Runtime</TargetName>
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>Runtime</TargetName>
+    <IntDir>$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../Sources;../../rapidxml-1.13;../../boost</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../Sources;../../rapidxml-1.13;../../boost</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <Cpp0xSupport>true</Cpp0xSupport>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../Sources;../../rapidxml-1.13;../../boost</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../Sources;../../rapidxml-1.13;../../boost</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

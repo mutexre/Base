@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Distribution">
+      <UniqueIdentifier>{d87db9e9-c04c-458f-98c0-2e53768c3a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{8fe07f00-c411-420c-b131-de484ca9f208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Internal">
+      <UniqueIdentifier>{a9c4074d-ffeb-476d-a53c-ffc2f13e4208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation">
+      <UniqueIdentifier>{729a5df3-b9f3-46cf-9214-1f45202ffcc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Internal\Geometry">
+      <UniqueIdentifier>{81680334-283f-4edf-909a-8dea78ed024b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Matrix">
+      <UniqueIdentifier>{ca8a4527-f522-4fbd-a043-fcec3f940258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Plane">
+      <UniqueIdentifier>{35440e1f-9a0f-45f3-93ef-e0426666a630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Vector">
+      <UniqueIdentifier>{95ac3db6-61ec-4deb-ad7c-3ab50d3ec80e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Vertex">
+      <UniqueIdentifier>{ef99c818-fade-4e2c-a74d-c584b4a15423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Matrix\Square">
+      <UniqueIdentifier>{4045a4f6-f6ff-4e77-b1d0-cd82d7bd3d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Matrix\Square\Vertex">
+      <UniqueIdentifier>{1456a76a-8ea2-4765-aedb-9b16ce9892fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Matrix\Square\Vertex\Special">
+      <UniqueIdentifier>{b6f92657-6a39-474f-8b3a-9956fe38f640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transformation\Matrix\Square\Vertex\Special\Combinations">
+      <UniqueIdentifier>{c97d93dc-41f5-45a0-bd58-9d1d02774f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Internal\Geometry\Hypercube">
+      <UniqueIdentifier>{abaf8e77-8a57-4ff1-b1f2-1564ffbf2523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Matrix">
+      <UniqueIdentifier>{121b0b8a-af15-4fb9-80d5-b688f5e579de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources\Math\Distribution\Bounded.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\Degenerate.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\DegenerateDefinition.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\Unbounded.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\Uniform.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\UniformDefinition.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\TransformationDefinition.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\Transformation.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Math\Distribution\Trait.h">
+      <Filter>Source Files\Distribution</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Internal\Geometry\Hypercube\Topology.h">
+      <Filter>Source Files\Internal\Geometry\Hypercube</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Internal\Geometry\Hypercube\TopologyDefinition.h">
+      <Filter>Source Files\Internal\Geometry\Hypercube</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Math.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\MathDefinition.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Plane.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Rational.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\RationalDefinition.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Vector.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\VectorDefinition.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Vertex.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\VertexDefinition.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Transformation.h">
+      <Filter>Source Files\Transformation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Vertex\VertexTransformation.h">
+      <Filter>Source Files\Transformation\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Vertex\VertexTransformationDefinition.h">
+      <Filter>Source Files\Transformation\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Vector\VectorTransformation.h">
+      <Filter>Source Files\Transformation\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Vector\VectorTransformationDefinition.h">
+      <Filter>Source Files\Transformation\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Plane\PlaneTransformation.h">
+      <Filter>Source Files\Transformation\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Plane\PlaneTransformationDefinition.h">
+      <Filter>Source Files\Transformation\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\VertexMatrixTransformation.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\VertexMatrixTransformationDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\PerspectiveProjection.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\PerspectiveProjectionDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\Rotation.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\RotationDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\Scale.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\ScaleDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\Translation.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\TranslationDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\Combinations\SP.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special\Combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\Combinations\SPDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special\Combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\Combinations\TSP.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special\Combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\Vertex\Special\Combinations\TSPDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square\Vertex\Special\Combinations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Geometry\Model.h">
+      <Filter>Source Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Geometry\PolarRose.h">
+      <Filter>Source Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Geometry\Primitives.h">
+      <Filter>Source Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Geometry\RingTopology.h">
+      <Filter>Source Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Geometry\Topology.h">
+      <Filter>Source Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Matrix.h">
+      <Filter>Source Files\Transformation\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\MatrixDefinition.h">
+      <Filter>Source Files\Transformation\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix.h">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix2.h">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix3.h">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix4.h">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrixDefinition.h">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\Scale.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\ScaleDefinition.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\Matrix.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\Translation.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\TranslationDefinition.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\PerspectiveProjection.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\PerspectiveProjectionDefinition.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\Rotation.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Matrix\RotationDefinition.h">
+      <Filter>Source Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Math\Geometry\Hypercube.h">
+      <Filter>Source Files\Geometry</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix1x1.cpp">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix2x2.cpp">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix3x3.cpp">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Math\Transformations\Matrix\Square\SquareMatrix4x4.cpp">
+      <Filter>Source Files\Transformation\Matrix\Square</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Math\Geometry\Hypercube.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BDE052B6-E8E8-4867-BB1D-5C63C1A3A395</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Math</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C01DFDB9-C6CA-40C9-8C48-5D37C7378C23</key>
+		<string>ssh://projects.mutexre.com/framework/math.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Apple/Math.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C01DFDB9-C6CA-40C9-8C48-5D37C7378C23</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://projects.mutexre.com/framework/math.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C01DFDB9-C6CA-40C9-8C48-5D37C7378C23</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C01DFDB9-C6CA-40C9-8C48-5D37C7378C23</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Math</string>
+		</dict>
+	</array>
+</dict>
+</plist>
