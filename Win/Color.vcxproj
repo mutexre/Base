@@ -100,7 +100,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../rapidxml-1.13; ../../boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../rapidxml; ../../boost</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4503</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
