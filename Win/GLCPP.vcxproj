@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9391916F-EE48-46CB-A0A5-05990CEC8891}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GLCPP</RootNamespace>
+    <ProjectName>Library</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>GLCPP</TargetName>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>GLCPP</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>GLCPP</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>GLCPP</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>GLEW_STATIC; WIN32;_DEBUG;_ITERATOR_DEBUG_LEVEL=2;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)</ObjectFileName>
+      <DisableSpecificWarnings>4710;4820;4350; 4503</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib; glew32sd.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>../../glew-1.10.0/lib/$(Configuration)/$(PlatformName);</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>GLEW_STATIC; WIN32;_DEBUG;_ITERATOR_DEBUG_LEVEL=2;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)</ObjectFileName>
+      <DisableSpecificWarnings>4710;4820;4350; 4503</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>GLEW_STATIC; WIN32;NDEBUG;_LIB;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)</ObjectFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DisableSpecificWarnings>4710;4820;4350; 4503</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>GLEW_STATIC; WIN32;NDEBUG;_LIB;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)</ObjectFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DisableSpecificWarnings>4710;4820;4350; 4503</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\GLCPP\Auxiliary\Geometry\Cube\Data.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Auxiliary\Geometry\Quad\Data.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Auxiliary\Subroutines.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Buffer\Buffer.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Framebuffer\Framebuffer.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\GL.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Object.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\PixelStore\PixelStore.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Query\Queries.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Query\Query.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Renderbuffer\Renderbuffer.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Renderer\ViewportRenderer.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Shader\Attribute.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Shader\FragmentShader.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Shader\GeometryShader.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Shader\Shader.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Shader\ShaderProgram.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Shader\Uniform.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Shader\VertexShader.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Texture\Sampler.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Texture\SamplingState.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\Texture\Texture.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\UniformBlock\BindingPoint.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\AttribPointer.cpp" />
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\Kit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\KitOptions.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\VertexArray.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\Buffer.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\BufferDefinition.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\Cube\Data.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\Quad\Data.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\Buffer.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\BufferDefinition.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\Multibuffer.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\MultibufferDefinition.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\ProgramWithSource.h" />
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Subroutines.h" />
+    <ClInclude Include="..\Sources\GLCPP\Buffer\Buffer.h" />
+    <ClInclude Include="..\Sources\GLCPP\Framebuffer\Framebuffer.h" />
+    <ClInclude Include="..\Sources\GLCPP\GL.h" />
+    <ClInclude Include="..\Sources\GLCPP\Input.h" />
+    <ClInclude Include="..\Sources\GLCPP\Object.h" />
+    <ClInclude Include="..\Sources\GLCPP\PixelStore\PixelStore.h" />
+    <ClInclude Include="..\Sources\GLCPP\Platform.h" />
+    <ClInclude Include="..\Sources\GLCPP\Query\Queries.h" />
+    <ClInclude Include="..\Sources\GLCPP\Query\Query.h" />
+    <ClInclude Include="..\Sources\GLCPP\Rect.h" />
+    <ClInclude Include="..\Sources\GLCPP\Renderbuffer\Renderbuffer.h" />
+    <ClInclude Include="..\Sources\GLCPP\Renderer\Renderer.h" />
+    <ClInclude Include="..\Sources\GLCPP\Renderer\ViewportRenderer.h" />
+    <ClInclude Include="..\Sources\GLCPP\Shader\FragmentShader.h" />
+    <ClInclude Include="..\Sources\GLCPP\Shader\GeometryShader.h" />
+    <ClInclude Include="..\Sources\GLCPP\Shader\Shader.h" />
+    <ClInclude Include="..\Sources\GLCPP\Shader\ShaderProgram.h" />
+    <ClInclude Include="..\Sources\GLCPP\Shader\VertexShader.h" />
+    <ClInclude Include="..\Sources\GLCPP\Texture\PixelData.h" />
+    <ClInclude Include="..\Sources\GLCPP\Texture\Sampler.h" />
+    <ClInclude Include="..\Sources\GLCPP\Texture\SamplingState.h" />
+    <ClInclude Include="..\Sources\GLCPP\Texture\Texture.h" />
+    <ClInclude Include="..\Sources\GLCPP\Texture\TextureTarget.h" />
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\BindingPoint.h" />
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\Instance.h" />
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\InstanceDefinition.h" />
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\Layout.h" />
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\LayoutDefinition.h" />
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\UniformBlock.h" />
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\UniformBlockDefinition.h" />
+    <ClInclude Include="..\Sources\GLCPP\VertexArray\Kit.h" />
+    <ClInclude Include="..\Sources\GLCPP\VertexArray\VertexArray.h" />
+    <ClInclude Include="..\Sources\GLCPP\Viewport.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

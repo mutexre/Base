@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Sources\Shader">
+      <UniqueIdentifier>{a4a11123-5dda-41ac-8d64-bdcc4ae3d7b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Buffer">
+      <UniqueIdentifier>{55d6a476-8491-4bc0-8a1f-dcbbe373b7eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\VertexArray">
+      <UniqueIdentifier>{852335f6-2faa-4a97-a335-c2fc84925508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\UniformBlock">
+      <UniqueIdentifier>{8c9b9673-a4e6-4be9-987b-490a3104f800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Framebuffer">
+      <UniqueIdentifier>{38a1313c-3da0-4fc8-aeae-733ad2c77872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Renderbuffer">
+      <UniqueIdentifier>{72174f8d-4ebc-4516-9405-80705d083d8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\PixelStore">
+      <UniqueIdentifier>{2acb2b3c-5a38-4036-b15f-f4ecfe785966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Query">
+      <UniqueIdentifier>{7a5c03bf-8d50-4b1c-833c-63ad16a24798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Texture">
+      <UniqueIdentifier>{fe2ade52-1796-4b33-a3a6-e0841fe9aa86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Renderer">
+      <UniqueIdentifier>{ffbf467d-98ef-48d6-a401-613ef9cc5b85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\AUX">
+      <UniqueIdentifier>{6872ad18-0953-4708-82a4-b74472f00fe1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\AUX\Memory">
+      <UniqueIdentifier>{799790e5-687f-4129-88f0-ae91d80b225a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\AUX\Geometry">
+      <UniqueIdentifier>{966cc954-9e07-4541-a7a1-66f467531de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\AUX\Geometry\Quad">
+      <UniqueIdentifier>{dc0df6c0-0303-41ce-af23-ff31227d541b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\AUX\Geometry\Cube">
+      <UniqueIdentifier>{940f9ff9-69a1-4d95-b77c-122453cd5aca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\GLCPP\GL.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Renderer\ViewportRenderer.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Buffer\Buffer.cpp">
+      <Filter>Sources\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\UniformBlock\BindingPoint.cpp">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\AttribPointer.cpp">
+      <Filter>Sources\VertexArray</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\Kit.cpp">
+      <Filter>Sources\VertexArray</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Query\Query.cpp">
+      <Filter>Sources\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Query\Queries.cpp">
+      <Filter>Sources\Query</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Renderbuffer\Renderbuffer.cpp">
+      <Filter>Sources\Renderbuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\PixelStore\PixelStore.cpp">
+      <Filter>Sources\PixelStore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Texture\Sampler.cpp">
+      <Filter>Sources\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Shader\Shader.cpp">
+      <Filter>Sources\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Texture\SamplingState.cpp">
+      <Filter>Sources\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Texture\Texture.cpp">
+      <Filter>Sources\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Object.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\KitOptions.cpp">
+      <Filter>Sources\VertexArray</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\VertexArray\VertexArray.cpp">
+      <Filter>Sources\VertexArray</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Framebuffer\Framebuffer.cpp">
+      <Filter>Sources\Framebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Shader\FragmentShader.cpp">
+      <Filter>Sources\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Shader\ShaderProgram.cpp">
+      <Filter>Sources\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Shader\VertexShader.cpp">
+      <Filter>Sources\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Auxiliary\Subroutines.cpp">
+      <Filter>Sources\AUX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Auxiliary\Geometry\Quad\Data.cpp">
+      <Filter>Sources\AUX\Geometry\Quad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Auxiliary\Geometry\Cube\Data.cpp">
+      <Filter>Sources\AUX\Geometry\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Shader\GeometryShader.cpp">
+      <Filter>Sources\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Shader\Attribute.cpp">
+      <Filter>Sources\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\GLCPP\Shader\Uniform.cpp">
+      <Filter>Sources\Shader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\BindingPoint.h">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Shader\VertexShader.h">
+      <Filter>Sources\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\VertexArray\VertexArray.h">
+      <Filter>Sources\VertexArray</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Texture\Texture.h">
+      <Filter>Sources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Texture\TextureTarget.h">
+      <Filter>Sources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Shader\ShaderProgram.h">
+      <Filter>Sources\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Shader\Shader.h">
+      <Filter>Sources\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Texture\Sampler.h">
+      <Filter>Sources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Texture\SamplingState.h">
+      <Filter>Sources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Query\Query.h">
+      <Filter>Sources\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Query\Queries.h">
+      <Filter>Sources\Query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Renderbuffer\Renderbuffer.h">
+      <Filter>Sources\Renderbuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\PixelStore\PixelStore.h">
+      <Filter>Sources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Texture\PixelData.h">
+      <Filter>Sources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\GL.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Object.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Renderer\Renderer.h">
+      <Filter>Sources\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\VertexArray\Kit.h">
+      <Filter>Sources\VertexArray</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\Multibuffer.h">
+      <Filter>Sources\AUX\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\MultibufferDefinition.h">
+      <Filter>Sources\AUX\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\Layout.h">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\LayoutDefinition.h">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Buffer\Buffer.h">
+      <Filter>Sources\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\BufferDefinition.h">
+      <Filter>Sources\AUX\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Memory\Buffer.h">
+      <Filter>Sources\AUX\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Framebuffer\Framebuffer.h">
+      <Filter>Sources\Framebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Platform.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\InstanceDefinition.h">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\Instance.h">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Shader\FragmentShader.h">
+      <Filter>Sources\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\ProgramWithSource.h">
+      <Filter>Sources\AUX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Rect.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Subroutines.h">
+      <Filter>Sources\AUX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Viewport.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Renderer\ViewportRenderer.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\Buffer.h">
+      <Filter>Sources\AUX\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\BufferDefinition.h">
+      <Filter>Sources\AUX\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\Quad\Data.h">
+      <Filter>Sources\AUX\Geometry\Quad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Auxiliary\Geometry\Cube\Data.h">
+      <Filter>Sources\AUX\Geometry\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\UniformBlock.h">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\UniformBlock\UniformBlockDefinition.h">
+      <Filter>Sources\UniformBlock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Shader\GeometryShader.h">
+      <Filter>Sources\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\GLCPP\Input.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

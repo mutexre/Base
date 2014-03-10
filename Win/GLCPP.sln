@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library", "GLCPP.vcxproj", "{9391916F-EE48-46CB-A0A5-05990CEC8891}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{B34B03B2-C58E-4A87-9A73-BC7DB3D9E996}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Debug|Win32.Build.0 = Debug|Win32
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Debug|x64.ActiveCfg = Debug|x64
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Debug|x64.Build.0 = Debug|x64
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Release|Win32.ActiveCfg = Release|Win32
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Release|Win32.Build.0 = Release|Win32
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Release|x64.ActiveCfg = Release|x64
+		{9391916F-EE48-46CB-A0A5-05990CEC8891}.Release|x64.Build.0 = Release|x64
+		{B34B03B2-C58E-4A87-9A73-BC7DB3D9E996}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B34B03B2-C58E-4A87-9A73-BC7DB3D9E996}.Debug|Win32.Build.0 = Debug|Win32
+		{B34B03B2-C58E-4A87-9A73-BC7DB3D9E996}.Debug|x64.ActiveCfg = Debug|Win32
+		{B34B03B2-C58E-4A87-9A73-BC7DB3D9E996}.Release|Win32.ActiveCfg = Release|Win32
+		{B34B03B2-C58E-4A87-9A73-BC7DB3D9E996}.Release|Win32.Build.0 = Release|Win32
+		{B34B03B2-C58E-4A87-9A73-BC7DB3D9E996}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

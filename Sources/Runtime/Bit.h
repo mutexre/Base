@@ -79,7 +79,7 @@ namespace Rt
         b = a << 8;  if (b) { n -= 8;  a = b; }
         b = a << 4;  if (b) { n -= 4;  a = b; }
         b = a << 2;  if (b) { n -= 2;  a = b; }
-        b = a << 1;  if (b) { n -= 1;  a = b; };
+        b = a << 1;  if (b) n -= 1;
 
         return n;
     }

@@ -13,4 +13,7 @@
    <FileRef
       location = "group:Color.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:GLCPP.xcodeproj">
+   </FileRef>
 </Workspace>
