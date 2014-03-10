@@ -16,4 +16,7 @@
    <FileRef
       location = "group:GLCPP.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:SceneGraph.xcodeproj">
+   </FileRef>
 </Workspace>

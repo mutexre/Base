@@ -172,19 +172,13 @@
 			buildSettings = {
 				BOOST = ../../boost;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"${MATH}/Sources",
-					"${RUNTIME}/Sources",
 					"${RAPIDXML}",
 					"${BOOST}",
 					Sources,
 					../Sources,
 				);
-				MATH = ../../Math;
 				PRODUCT_NAME = React;
 				RAPIDXML = ../../rapidxml;
-				RUNTIME = ../../Runtime;
 			};
 			name = Debug;
 		};
@@ -193,19 +187,13 @@
 			buildSettings = {
 				BOOST = ../../boost;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"${MATH}/Sources",
-					"${RUNTIME}/Sources",
 					"${RAPIDXML}",
 					"${BOOST}",
 					Sources,
 					../Sources,
 				);
-				MATH = ../../Math;
 				PRODUCT_NAME = React;
 				RAPIDXML = ../../rapidxml;
-				RUNTIME = ../../Runtime;
 			};
 			name = Release;
 		};

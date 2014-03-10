@@ -16,21 +16,24 @@ clean:
 	xcodebuild -project React.xcodeproj -target ${TARGET} -configuration ${CONF} clean
 	xcodebuild -project Color.xcodeproj -target ${TARGET} -configuration ${CONF} clean
 	xcodebuild -project GLCPP.xcodeproj -target ${TARGET} -configuration ${CONF} clean
+	xcodebuild -project SceneGraph.xcodeproj -target ${TARGET} -configuration ${CONF} clean
 
 build:
 	xcodebuild -project Runtime.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
-	xcodebuild -project Math.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
-	xcodebuild -project React.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
-	xcodebuild -project Color.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
-	xcodebuild -project GLCPP.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
-	mkdir -p ${OUTDIR}; libtool -static -o ${OUTDIR}/libBase.a ${OUTDIR}/libRuntime.a ${OUTDIR}/libMath.a ${OUTDIR}/libReact.a ${OUTDIR}/libColor.a ${OUTDIR}/libGLCPP.a
+	xcodebuild -project Math.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project React.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project Color.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project GLCPP.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project SceneGraph.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} build ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	mkdir -p ${OUTDIR}; libtool -static -o ${OUTDIR}/libBase.a ${OUTDIR}/libRuntime.a ${OUTDIR}/libMath.a ${OUTDIR}/libReact.a ${OUTDIR}/libColor.a ${OUTDIR}/libGLCPP.a ${OUTDIR}/libSceneGraph.a
 
 analyze:
 	xcodebuild -project Runtime.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
-	xcodebuild -project Math.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
-	xcodebuild -project React.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
-	xcodebuild -project Color.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
-	xcodebuild -project GLCPP.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML} RUNTIME=${RUNTIME}
+	xcodebuild -project Math.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project React.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project Color.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project GLCPP.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
+	xcodebuild -project SceneGraph.xcodeproj -target ${TARGET} -configuration ${CONF} -sdk ${SDK} analyze ARCHS="${ARCH}" BOOST=${BOOST} RAPIDXML=${RAPIDXML}
 
 check:
 

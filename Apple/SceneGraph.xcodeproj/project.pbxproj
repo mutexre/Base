@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922A27A818802E8C005FB912 /* Buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A279618802E8C005FB912 /* Buffer.h */; };
+		922A27AA18802E8C005FB912 /* DrawCall.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A279818802E8C005FB912 /* DrawCall.h */; };
+		922A27AB18802E8C005FB912 /* Group.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A279918802E8C005FB912 /* Group.h */; };
+		922A27AC18802E8C005FB912 /* Light.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A279A18802E8C005FB912 /* Light.h */; };
+		922A27AD18802E8C005FB912 /* Material.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A279B18802E8C005FB912 /* Material.h */; };
+		922A27B018802E8C005FB912 /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A279E18802E8C005FB912 /* Object.h */; };
+		922A27B118802E8C005FB912 /* Order.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A279F18802E8C005FB912 /* Order.h */; };
+		922A27B218802E8C005FB912 /* Program.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A27A018802E8C005FB912 /* Program.h */; };
+		922A27B318802E8C005FB912 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 922A27A118802E8C005FB912 /* Scene.cpp */; };
+		922A27B418802E8C005FB912 /* Scene.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A27A218802E8C005FB912 /* Scene.h */; };
+		922A27B518802E8C005FB912 /* SceneGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A27A318802E8C005FB912 /* SceneGraph.h */; };
+		922A27B618802E8C005FB912 /* Segment.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A27A418802E8C005FB912 /* Segment.h */; };
+		922A27B718802E8C005FB912 /* StandardTransforms.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A27A518802E8C005FB912 /* StandardTransforms.h */; };
+		922A27B818802E8C005FB912 /* UniformBlockBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A27A618802E8C005FB912 /* UniformBlockBinding.h */; };
+		922A27B918802E8C005FB912 /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = 922A27A718802E8C005FB912 /* View.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		922A279618802E8C005FB912 /* Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Buffer.h; path = ../Sources/SceneGraph/Buffer.h; sourceTree = "<group>"; };
+		922A279818802E8C005FB912 /* DrawCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawCall.h; path = ../Sources/SceneGraph/DrawCall.h; sourceTree = "<group>"; };
+		922A279918802E8C005FB912 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Group.h; path = ../Sources/SceneGraph/Group.h; sourceTree = "<group>"; };
+		922A279A18802E8C005FB912 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Light.h; path = ../Sources/SceneGraph/Light.h; sourceTree = "<group>"; };
+		922A279B18802E8C005FB912 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../Sources/SceneGraph/Material.h; sourceTree = "<group>"; };
+		922A279E18802E8C005FB912 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Object.h; path = ../Sources/SceneGraph/Object.h; sourceTree = "<group>"; };
+		922A279F18802E8C005FB912 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Order.h; path = ../Sources/SceneGraph/Order.h; sourceTree = "<group>"; };
+		922A27A018802E8C005FB912 /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Program.h; path = ../Sources/SceneGraph/Program.h; sourceTree = "<group>"; };
+		922A27A118802E8C005FB912 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = ../Sources/SceneGraph/Scene.cpp; sourceTree = "<group>"; };
+		922A27A218802E8C005FB912 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = ../Sources/SceneGraph/Scene.h; sourceTree = "<group>"; };
+		922A27A318802E8C005FB912 /* SceneGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneGraph.h; path = ../Sources/SceneGraph/SceneGraph.h; sourceTree = "<group>"; };
+		922A27A418802E8C005FB912 /* Segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Segment.h; path = ../Sources/SceneGraph/Segment.h; sourceTree = "<group>"; };
+		922A27A518802E8C005FB912 /* StandardTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandardTransforms.h; path = ../Sources/SceneGraph/StandardTransforms.h; sourceTree = "<group>"; };
+		922A27A618802E8C005FB912 /* UniformBlockBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UniformBlockBinding.h; path = ../Sources/SceneGraph/UniformBlockBinding.h; sourceTree = "<group>"; };
+		922A27A718802E8C005FB912 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = View.h; path = ../Sources/SceneGraph/View.h; sourceTree = "<group>"; };
+		9270C94917C0214C00EFA781 /* libSceneGraph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSceneGraph.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		927B3FF418895F5B006948D5 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Data.h; path = ../Sources/SceneGraph/Data.h; sourceTree = "<group>"; };
+		927B3FF5188A66E2006948D5 /* Implementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Implementation.h; path = ../Sources/SceneGraph/Implementation.h; sourceTree = "<group>"; };
+		927CF28F1892BB7700720076 /* DataBinding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataBinding.h; path = ../Sources/SceneGraph/DataBinding.h; sourceTree = "<group>"; };
+		9288CF7318943FB700452C1C /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Data.h; path = ../Sources/SceneGraph/Topological/Data.h; sourceTree = "<group>"; };
+		9288CF7418943FCE00452C1C /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Object.h; path = ../Sources/SceneGraph/Topological/Object.h; sourceTree = "<group>"; };
+		92D747A317C512F300CE662B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		92D747A617C512F300CE662B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		92D747A717C512F300CE662B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		92D747A817C512F300CE662B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		92D747CC17C54BBF00CE662B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		92D747CE17C54BCB00CE662B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9270C94617C0214C00EFA781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9270C93C17C020A500EFA781 = {
+			isa = PBXGroup;
+			children = (
+				9270C94317C020B600EFA781 /* Sources */,
+				92D747A217C512F300CE662B /* Frameworks */,
+				9270C94A17C0214C00EFA781 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9270C94317C020B600EFA781 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9288CF7218943F7000452C1C /* Topological */,
+				922A27A318802E8C005FB912 /* SceneGraph.h */,
+				922A27A018802E8C005FB912 /* Program.h */,
+				922A279618802E8C005FB912 /* Buffer.h */,
+				927B3FF418895F5B006948D5 /* Data.h */,
+				927CF28F1892BB7700720076 /* DataBinding.h */,
+				922A279818802E8C005FB912 /* DrawCall.h */,
+				922A279B18802E8C005FB912 /* Material.h */,
+				922A27A418802E8C005FB912 /* Segment.h */,
+				922A279E18802E8C005FB912 /* Object.h */,
+				922A27A618802E8C005FB912 /* UniformBlockBinding.h */,
+				922A279F18802E8C005FB912 /* Order.h */,
+				922A279918802E8C005FB912 /* Group.h */,
+				922A279A18802E8C005FB912 /* Light.h */,
+				922A27A718802E8C005FB912 /* View.h */,
+				922A27A518802E8C005FB912 /* StandardTransforms.h */,
+				927B3FF5188A66E2006948D5 /* Implementation.h */,
+				922A27A218802E8C005FB912 /* Scene.h */,
+				922A27A118802E8C005FB912 /* Scene.cpp */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		9270C94A17C0214C00EFA781 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9270C94917C0214C00EFA781 /* libSceneGraph.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9288CF7218943F7000452C1C /* Topological */ = {
+			isa = PBXGroup;
+			children = (
+				9288CF7318943FB700452C1C /* Data.h */,
+				9288CF7418943FCE00452C1C /* Object.h */,
+			);
+			name = Topological;
+			sourceTree = "<group>";
+		};
+		92D747A217C512F300CE662B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92D747CE17C54BCB00CE662B /* OpenGL.framework */,
+				92D747CC17C54BBF00CE662B /* CoreVideo.framework */,
+				92D747A317C512F300CE662B /* Cocoa.framework */,
+				92D747A517C512F300CE662B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92D747A517C512F300CE662B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92D747A617C512F300CE662B /* AppKit.framework */,
+				92D747A717C512F300CE662B /* CoreData.framework */,
+				92D747A817C512F300CE662B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9270C94717C0214C00EFA781 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922A27A818802E8C005FB912 /* Buffer.h in Headers */,
+				922A27B818802E8C005FB912 /* UniformBlockBinding.h in Headers */,
+				922A27B118802E8C005FB912 /* Order.h in Headers */,
+				922A27B918802E8C005FB912 /* View.h in Headers */,
+				922A27B718802E8C005FB912 /* StandardTransforms.h in Headers */,
+				922A27B418802E8C005FB912 /* Scene.h in Headers */,
+				922A27AC18802E8C005FB912 /* Light.h in Headers */,
+				922A27B618802E8C005FB912 /* Segment.h in Headers */,
+				922A27AB18802E8C005FB912 /* Group.h in Headers */,
+				922A27AA18802E8C005FB912 /* DrawCall.h in Headers */,
+				922A27AD18802E8C005FB912 /* Material.h in Headers */,
+				922A27B018802E8C005FB912 /* Object.h in Headers */,
+				922A27B518802E8C005FB912 /* SceneGraph.h in Headers */,
+				922A27B218802E8C005FB912 /* Program.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9270C94817C0214C00EFA781 /* OSX Static Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9270C94B17C0214C00EFA781 /* Build configuration list for PBXNativeTarget "OSX Static Library" */;
+			buildPhases = (
+				9270C94517C0214C00EFA781 /* Sources */,
+				9270C94617C0214C00EFA781 /* Frameworks */,
+				9270C94717C0214C00EFA781 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OSX Static Library";
+			productName = SceneGraph;
+			productReference = 9270C94917C0214C00EFA781 /* libSceneGraph.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9270C93D17C020A500EFA781 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 9270C94017C020A500EFA781 /* Build configuration list for PBXProject "SceneGraph" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9270C93C17C020A500EFA781;
+			productRefGroup = 9270C94A17C0214C00EFA781 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9270C94817C0214C00EFA781 /* OSX Static Library */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9270C94517C0214C00EFA781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922A27B318802E8C005FB912 /* Scene.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9270C94117C020A500EFA781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BOOST = ../../boost;
+				HEADER_SEARCH_PATHS = (
+					"${RAPIDXML}",
+					"${BOOST}",
+					../Sources,
+					Sources,
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				RAPIDXML = ../../rapidxml;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		9270C94217C020A500EFA781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BOOST = ../../boost;
+				HEADER_SEARCH_PATHS = (
+					"${RAPIDXML}",
+					"${BOOST}",
+					../Sources,
+					Sources,
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				RAPIDXML = ../../rapidxml;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+		9270C94C17C0214C00EFA781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${inherited}";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = SceneGraph;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9270C94D17C0214C00EFA781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${inherited}";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = SceneGraph;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9270C94017C020A500EFA781 /* Build configuration list for PBXProject "SceneGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9270C94117C020A500EFA781 /* Debug */,
+				9270C94217C020A500EFA781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9270C94B17C0214C00EFA781 /* Build configuration list for PBXNativeTarget "OSX Static Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9270C94C17C0214C00EFA781 /* Debug */,
+				9270C94D17C0214C00EFA781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9270C93D17C020A500EFA781 /* Project object */;
+}

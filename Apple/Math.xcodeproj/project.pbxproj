@@ -546,32 +546,28 @@
 		9270C95317C021C000EFA781 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BOOST = /usr/local/include;
+				BOOST = ../../boost;
 				HEADER_SEARCH_PATHS = (
 					"${RAPIDXML}",
-					"${RUNTIME}/Sources",
 					"${BOOST}",
 					../Sources,
 					Sources,
 				);
-				RAPIDXML = "../../rapidxml-1.13";
-				RUNTIME = ../../Runtime;
+				RAPIDXML = ../../rapidxml;
 			};
 			name = Debug;
 		};
 		9270C95417C021C000EFA781 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BOOST = /usr/local/include;
+				BOOST = ../../boost;
 				HEADER_SEARCH_PATHS = (
 					"${RAPIDXML}",
-					"${RUNTIME}/Sources",
 					"${BOOST}",
 					../Sources,
 					Sources,
 				);
-				RAPIDXML = "../../rapidxml-1.13";
-				RUNTIME = ../../Runtime;
+				RAPIDXML = ../../rapidxml;
 			};
 			name = Release;
 		};

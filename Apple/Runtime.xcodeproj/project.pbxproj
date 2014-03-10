@@ -599,13 +599,15 @@
 		92EDB7991631B8D80007941B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BOOST = /usr/local/include;
+				BOOST = ../../boost;
 				HEADER_SEARCH_PATHS = (
 					"${RAPIDXML}",
 					"${BOOST}",
+					../Sources,
+					Sources,
 				);
 				LIBRARY_SEARCH_PATHS = "";
-				RAPIDXML = "../../rapidxml-1.13";
+				RAPIDXML = ../../rapidxml;
 				SYMROOT = /tmp/build;
 			};
 			name = Debug;
@@ -613,13 +615,15 @@
 		92EDB79A1631B8D80007941B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BOOST = /usr/local/include;
+				BOOST = ../../boost;
 				HEADER_SEARCH_PATHS = (
 					"${RAPIDXML}",
 					"${BOOST}",
+					../Sources,
+					Sources,
 				);
 				LIBRARY_SEARCH_PATHS = "";
-				RAPIDXML = "../../rapidxml-1.13";
+				RAPIDXML = ../../rapidxml;
 				SYMROOT = /tmp/build;
 			};
 			name = Release;
@@ -658,11 +662,7 @@
 				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					../Sources,
-					Sources,
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Runtime;
@@ -700,11 +700,7 @@
 				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					../Sources,
-					Sources,
-				);
+				HEADER_SEARCH_PATHS = "${inherited}";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = Runtime;
 				RUN_CLANG_STATIC_ANALYZER = NO;
