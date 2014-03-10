@@ -70,18 +70,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>GLCPP</TargetName>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>GLCPP\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>GLCPP</TargetName>
+    <IntDir>GLCPP\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>GLCPP\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>GLCPP</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>GLCPP</TargetName>
+    <IntDir>GLCPP\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -91,7 +93,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>GLEW_STATIC; WIN32;_DEBUG;_ITERATOR_DEBUG_LEVEL=2;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
       <PreprocessToFile>false</PreprocessToFile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
@@ -118,7 +120,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>GLEW_STATIC; WIN32;_DEBUG;_ITERATOR_DEBUG_LEVEL=2;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
       <PreprocessToFile>false</PreprocessToFile>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
@@ -146,7 +148,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>GLEW_STATIC; WIN32;NDEBUG;_LIB;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)/%(RelativeDir)</ObjectFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <DisableSpecificWarnings>4710;4820;4350; 4503</DisableSpecificWarnings>
@@ -171,7 +173,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>GLEW_STATIC; WIN32;NDEBUG;_LIB;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml-1.13; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Sources; ../../Runtime/Sources; ../../Math/Sources; ../../rapidxml; ../../boost; ../../glew-1.10.0/include; ../../Geometry/Sources</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)/%(RelativeDir)</ObjectFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <DisableSpecificWarnings>4710;4820;4350; 4503</DisableSpecificWarnings>
