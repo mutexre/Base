@@ -4,7 +4,7 @@
 namespace SG
 {
     template <typename T>
-    class Group : public Rt::Observable<>
+    class Group : public React::Observable<1>
     {
     public:
         typedef std::set<T> Items;

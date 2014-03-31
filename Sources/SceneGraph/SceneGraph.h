@@ -23,9 +23,9 @@ namespace SG
     class Light;
     class Frame;
 
-    typedef Group<std::shared_ptr<Object>> Objects;
-    typedef Group<std::shared_ptr<Light>> Lights;
-    typedef Order<std::shared_ptr<Object>> ObjectsOrder;
+    using Objects = Group<std::shared_ptr<Object>>;
+    using Lights = Group<std::shared_ptr<Light>>;
+    using ObjectsOrder = Order<std::shared_ptr<Object>>;
 }
 
 //#include <SceneGraph/Scene.h>

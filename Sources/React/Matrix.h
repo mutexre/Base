@@ -1,30 +1,33 @@
-#ifndef header_083E5368E3C7
-#define header_083E5368E3C7
+#ifndef header_0352A5F6AB78
+#define header_0352A5F6AB78
 
 namespace React
 {
-//    template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-//    using Value = Rt::Value::Scalar<Math::Matrix<T, I, Alignment>>;
-
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    class Value : public Rt::Value::Scalar<Math::Matrix<T, I, Alignment>>
+    using Matrix = Scalar<Math::Matrix<T, I, Alignment>>;
+
+/*    template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
+    class Matrix : public Scalar<Math::Matrix<T, I, Alignment>>
     {
     public:
         using Ref = typename Math::Matrix<T, I, Alignment>::Ref;
 
     public:
-        Value() {}
+        Matrix() {}
 
-        Value(Math::Matrix<T, I, Alignment> value) {
+        Matrix(Math::Matrix<T, I, Alignment> value) {
             this->value = value;
             this->setValidity(true);
         }
 
-        virtual ~Value() {}
+        virtual ~Matrix() {}
 
-        Math::Matrix<T, I, Alignment>& get() {
-            this->evaluateIfNeeded();
-            return this->value;
+        virtual Math::Matrix<T, I, Alignment>& get() {
+            return Scalar<Math::Matrix<T, I, Alignment>>::get();
+        }
+
+        virtual void set(T value) {
+            Scalar<Math::Matrix<T, I, Alignment>>::set(value);
         }
 
         Ref get(I i) {
@@ -67,14 +70,6 @@ namespace React
             return this->value.get(this->layout.getIndex(indices));
         }
 
-        void set(const Math::Matrix<T, I, Alignment>& value) {
-            this->value = value;
-        }
-
-        void set(T value) {
-            this->value.set(value);
-        }
-
         void set(I i, T value) {
             this->value.set(i, value);
         }
@@ -90,62 +85,62 @@ namespace React
         void set(const std::vector<I>& indices, T value) {
             this->value.set(indices, value);
         }
-    };
+    };*/
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    using ValuePtr = std::shared_ptr<Value<T, I, Alignment>>;
+    using MatrixPtr = std::shared_ptr<Matrix<T, I, Alignment>>;
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    using ValueUniquePtr = std::unique_ptr<Value<T, I, Alignment>>;
+    using MatrixUniquePtr = std::unique_ptr<Matrix<T, I, Alignment>>;
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    using ValueWeakPtr = std::weak_ptr<Value<T, I, Alignment>>;
+    using MatrixWeakPtr = std::weak_ptr<Matrix<T, I, Alignment>>;
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeScalar() {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeScalar<T, I, Alignment>());
+    MatrixPtr<T, I, Alignment> makeMatrixScalar() {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeScalar<T, I, Alignment>());
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeScalar(T value) {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeScalar<T, I, Alignment>(value));
+    MatrixPtr<T, I, Alignment> makeMatrixScalar(T value) {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeScalar<T, I, Alignment>(value));
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeVector(const std::vector<T>& data) {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(data));
+    MatrixPtr<T, I, Alignment> makeVector(const std::vector<T>& data) {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(data));
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeVector(const T* data, std::size_t size) {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(data, size));
+    MatrixPtr<T, I, Alignment> makeVector(const T* data, std::size_t size) {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(data, size));
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeVector(T x, T y) {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(x, y));
+    MatrixPtr<T, I, Alignment> makeVector(T x, T y) {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(x, y));
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeVector(T x, T y, T z) {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(x, y, z));
+    MatrixPtr<T, I, Alignment> makeVector(T x, T y, T z) {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(x, y, z));
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeVector(T x, T y, T z, T w) {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(x, y, z, w));
+    MatrixPtr<T, I, Alignment> makeVector(T x, T y, T z, T w) {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeVector<T, I, Alignment>(x, y, z, w));
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeMatrix(Rt::u1 size = 4, bool loadIdentity = true) {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeMatrix<T, I, Alignment>(size, loadIdentity));
+    MatrixPtr<T, I, Alignment> makeMatrix(Rt::u1 size = 4, bool loadIdentity = true) {
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeMatrix<T, I, Alignment>(size, loadIdentity));
     }
 
     template <typename T = float, typename I = Rt::u1, std::size_t Alignment = 32>
-    ValuePtr<T, I, Alignment> makeMatrix(T size, const std::vector<T, Rt::AlignedAllocator<T, Alignment>>& data,
+    MatrixPtr<T, I, Alignment> makeMatrix(T size, const std::vector<T, Rt::AlignedAllocator<T, Alignment>>& data,
                                          Rt::Option<std::vector<Rt::u1>> layout = Rt::Option<std::vector<Rt::u1>>())
     {
-        return std::make_shared<Value<T, I, Alignment>>(Math::makeMatrix<T, I, Alignment>(size, data, layout));
+        return std::make_shared<Matrix<T, I, Alignment>>(Math::makeMatrix<T, I, Alignment>(size, data, layout));
     }
 }
 

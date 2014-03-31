@@ -630,6 +630,30 @@ namespace Math
             return copy.crop(size, offset);
         }
 
+        Ref operator*() {
+            return data[0];
+        }
+
+        ConstRef operator*() const {
+            return data[0];
+        }
+
+        Ref operator[](I i) {
+            return data[i];
+        }
+
+        ConstRef operator[](I i) const {
+            return data[i];
+        }
+
+        Ref operator[](const std::vector<I>& indices) {
+            return data[layout.getIndex(indices)];
+        }
+
+        ConstRef operator[](const std::vector<I>& indices) const {
+            return data[layout.getIndex(indices)];
+        }
+
         Ref get() {
             return data[0];
         }

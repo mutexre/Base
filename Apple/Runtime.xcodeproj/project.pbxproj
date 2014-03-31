@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		922C6C0F178DA90700FCDCD2 /* Range.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C6C0E178DA90700FCDCD2 /* Range.h */; };
-		9230C4C3179064DA0001015B /* Trait.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9230C4B9178FF2B90001015B /* Trait.cpp */; };
-		9230C4C5179065580001015B /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9230C4BE178FF56F0001015B /* Map.cpp */; };
-		9230C4C61790655A0001015B /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9230C4C0178FF6060001015B /* Vector.cpp */; };
 		9241EAAD17C64B10001CF48C /* Subroutines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9241EAAC17C64B10001CF48C /* Subroutines.cpp */; };
 		925DA25D16368ADB009CDA1D /* libRuntime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EDB7B31631DD4C0007941B /* libRuntime.a */; };
 		925DA2611636E091009CDA1D /* Debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 925DA2601636E054009CDA1D /* Debug.cpp */; };
@@ -120,7 +117,6 @@
 		929ADC0F179EB4E8009588BD /* ReadWrite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReadWrite.h; path = ../Sources/Runtime/Memory/Traits/ReadWrite.h; sourceTree = "<group>"; };
 		929ADC10179EB4F6009588BD /* Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Info.h; path = ../Sources/Runtime/Memory/Traits/Info.h; sourceTree = "<group>"; };
 		929ADC11179EB633009588BD /* AllocDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllocDefinition.h; path = ../Sources/Runtime/Memory/Traits/AllocDefinition.h; sourceTree = "<group>"; };
-		929D6EDB17FA0BDC00116E81 /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
 		92B797C316C3730F0097368D /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Parser.h; path = XML/Parser.h; sourceTree = "<group>"; };
 		92B797C416C373920097368D /* ElementProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ElementProcessor.h; path = XML/ElementProcessor.h; sourceTree = "<group>"; };
 		92B797C516C390EA0097368D /* Subroutines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Subroutines.h; path = XML/Subroutines.h; sourceTree = "<group>"; };
@@ -384,7 +380,6 @@
 				92882E9117B2A15700E8C223 /* Subroutines.h */,
 				9241EAAC17C64B10001CF48C /* Subroutines.cpp */,
 				92FFB94217BC1261006FA076 /* Bit.h */,
-				929D6EDB17FA0BDC00116E81 /* Observable.h */,
 				9244B28017BD193A0020B4B5 /* Test.h */,
 				92E9811618082234000364B7 /* AlignedAllocator.h */,
 				925DA26E16371119009CDA1D /* Test */,
@@ -507,9 +502,6 @@
 				92EDB7CF1632090D0007941B /* Object.cpp in Sources */,
 				92F778D81642BCA20059E5D9 /* Test.cpp in Sources */,
 				92B797C716C39BA60097368D /* Subroutines.cpp in Sources */,
-				9230C4C3179064DA0001015B /* Trait.cpp in Sources */,
-				9230C4C5179065580001015B /* Map.cpp in Sources */,
-				9230C4C61790655A0001015B /* Vector.cpp in Sources */,
 				9241EAAD17C64B10001CF48C /* Subroutines.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

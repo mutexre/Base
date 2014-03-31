@@ -57,7 +57,7 @@ namespace Rt
 
         class Trait : public Object,
                       public Versioned<Rt::u8>,
-                      public Observable<>,
+//                      public Observable<>,
                       public Lazy
         {
         public:

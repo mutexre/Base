@@ -19,4 +19,7 @@
    <FileRef
       location = "group:SceneGraph.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:UI.xcodeproj">
+   </FileRef>
 </Workspace>

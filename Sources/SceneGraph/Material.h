@@ -6,14 +6,14 @@ namespace SG
     class Material
     {
     private:
-        std::map<std::string, std::shared_ptr<React::Value<>>> properties;
+        std::map<std::string, React::MatrixPtr<>> properties;
 
     public:
-        std::shared_ptr<React::Value<>> get(const std::string& name) {
+        React::MatrixPtr<> get(const std::string& name) {
             return properties[name];
         }
 
-        void set(const std::string& name, std::shared_ptr<React::Value<>> value) {
+        void set(const std::string& name, React::MatrixPtr<> value) {
             properties[name] = value;
         }
 

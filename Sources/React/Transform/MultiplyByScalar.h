@@ -3,17 +3,25 @@
 
 namespace React
 {
-    template <typename T = float>
-    class MultiplyByScalar : public Transform<T, MultiplyByScalar<T>>
+    template <typename T>
+    class MultiplyByScalar : public Transform<MultiplyByScalar<T>>
     {
+        REACT_DEFINE_INPUT(ScalarPtr<T>, input, getInput, setInput, &MultiplyByScalar::invalidate)
+        REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &MultiplyByScalar::evaluate)
+
     protected:
         T multiplier;
 
     protected:
-        virtual void evaluate() {
-            if (!this->input[0]->get().empty()) {
-                this->output[0]->set(multiplier * this->input[0]->get());
-                this->output[0]->commit(true, false);
+        void evaluate() {
+            this->output->set(multiplier * input->get());
+            this->output->commit(false);
+        }
+
+        void invalidate() {
+            if (output.get()) {
+                output->invalidate();
+                output->notify(this);
             }
         }
 

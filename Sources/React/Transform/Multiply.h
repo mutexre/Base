@@ -3,20 +3,28 @@
 
 namespace React
 {
-    template <typename T = float>
-    class Multiply : public Transform<T, Multiply<T>>
+    template <typename T>
+    class Multiply : public Transform<Multiply<T>>
     {
+        REACT_DEFINE_VECTOR_INPUT(ScalarPtr<T>, input, getInput, setInput, addInput, &Multiply::invalidate)
+        REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &Multiply::evaluate)
+
     protected:
-        virtual void evaluate() {
-            if (!this->isThereEmptyInput()) {
-                Math::Matrix<T> result(4);
+        void evaluate() {
+            T result = input[0]->get();
 
-                result.loadIdentity();
-                for (auto& x : this->input)
-                    result *= x->get();
+            if (input.size() > 1)
+                for (auto i = 1; i < input.size(); i++)
+                    result *= input[i]->get();
 
-                this->output[0]->set(result);
-                this->output[0]->commit(true, false);
+            output->set(result);
+            output->commit(false);
+        }
+
+        void invalidate() {
+            if (output.get()) {
+                output->invalidate();
+                output->notify(this);
             }
         }
     };

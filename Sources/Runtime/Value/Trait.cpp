@@ -18,5 +18,5 @@ void Rt::Value::Trait::traverseTree(std::function<void (std::shared_ptr<Trait>)>
 void Rt::Value::Trait::commit(bool valid, bool notify) {
     incrementVersion();
     setValidity(valid);
-    if (notify) this->notify(this);
+//    if (notify) this->notify(this);
 }

@@ -13,8 +13,8 @@ namespace SG
         GL::Viewport viewport;
 
         struct Visibility {
-            using _Object = std::map<std::shared_ptr<Object>, React::ValuePtr<bool>>;
-            using _Segment = std::map<std::pair<std::shared_ptr<Object>, std::shared_ptr<Segment>>, React::ValuePtr<bool>>;
+            using _Object = std::map<std::shared_ptr<Object>, React::ScalarPtr<bool>>;
+            using _Segment = std::map<std::pair<std::shared_ptr<Object>, std::shared_ptr<Segment>>, React::ScalarPtr<bool>>;
 
             _Object object;
             _Segment segment;
@@ -22,7 +22,7 @@ namespace SG
         visibility;
 
         struct {
-            using Bindings = std::map<std::string, std::shared_ptr<React::Value<>>>;
+            using Bindings = std::map<std::string, React::MatrixPtr<>>;
             Bindings global;
             std::map<std::shared_ptr<Object>, Bindings> perObject;
             std::map<std::shared_ptr<Object>, std::map<std::shared_ptr<Segment>, Bindings>> perObjectAndSegment;
@@ -84,7 +84,7 @@ namespace SG
             glViewport(viewport.x, viewport.y, viewport.w, viewport.h);
         }
 
-        void bind(const std::string& variable, std::shared_ptr<React::Value<>> bindingPoint) {
+        void bind(const std::string& variable, React::MatrixPtr<> bindingPoint) {
             bindings.global[variable] = bindingPoint;
         }
 
@@ -93,7 +93,7 @@ namespace SG
             if (iter != bindings.global.end()) bindings.global.erase(iter);
         }
 
-        void bind(std::shared_ptr<Object> object, const std::string& variable, std::shared_ptr<React::Value<>> bindingPoint) {
+        void bind(std::shared_ptr<Object> object, const std::string& variable, React::MatrixPtr<> bindingPoint) {
             bindings.perObject[object][variable] = bindingPoint;
         }
 
@@ -108,7 +108,7 @@ namespace SG
         }
 
         void bind(std::shared_ptr<Object> object, std::shared_ptr<Segment> segment,
-                  const std::string& variable, std::shared_ptr<React::Value<>> bindingPoint)
+                  const std::string& variable, React::MatrixPtr<> bindingPoint)
         {
             bindings.perObject[object][variable] = bindingPoint;
         }
@@ -125,14 +125,14 @@ namespace SG
         }
 
         void setVisibility(std::shared_ptr<SG::Object> object,
-                           React::ValuePtr<bool> value)
+                           React::ScalarPtr<bool> value)
         {
             visibility.object[object] = value;
         }
 
         void setVisibility(std::shared_ptr<SG::Object> object,
                            std::shared_ptr<SG::Segment> segment,
-                           React::ValuePtr<bool> value)
+                           React::ScalarPtr<bool> value)
         {
             visibility.segment[std::make_pair(object, segment)] = value;
         }
@@ -147,7 +147,7 @@ namespace SG
 
                 auto iter = visibility.object.find(object);
                 if (iter != visibility.object.end())
-                    objectVisible = iter->second->get(0);
+                    objectVisible = iter->second->get();
 
                 if (objectVisible)
                     for (auto& segment : object->getSegments()) {
@@ -155,7 +155,7 @@ namespace SG
 
                         auto iter = visibility.segment.find(std::make_pair(object, segment));
                         if (iter != visibility.segment.end())
-                            segmentVisible = iter->second->get(0);
+                            segmentVisible = iter->second->get();
 
                         if (segmentVisible) {
                             auto program = segment->getProgram();

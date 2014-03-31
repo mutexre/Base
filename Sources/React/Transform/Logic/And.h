@@ -5,14 +5,23 @@ namespace React
 {
     namespace Logic
     {
-        template <typename T = bool>
-        class And : public Transform<T, And<T>>
+        template <typename T>
+        class And : public Transform<And<T>>
         {
+            REACT_DEFINE_INPUT(ScalarPtr<T>, a, getA, setA, &And::invalidate)
+            REACT_DEFINE_INPUT(ScalarPtr<T>, b, getB, setB, &And::invalidate)
+            REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &And::evaluate)
+
         protected:
-            virtual void evaluate() {
-                if (this->input.size() == 2 && !this->input[0]->get().empty() && !this->input[1]->get().empty()) {
-                    printf("%c %c\n", this->input[0]->get(0) ? 'y' : 'n', this->input[1]->get(0) ? 'y' : 'n');
-                    this->output[0]->set(this->input[0]->get(0) && this->input[1]->get(0));
+            void evaluate() {
+//                printf("%c %c\n", a->get() ? 'y' : 'n', b->get() ? 'y' : 'n');
+                output->set(a->get() && b->get());
+            }
+
+            void invalidate() {
+                if (output.get()) {
+                    output->invalidate();
+                    output->notify(this);
                 }
             }
         };

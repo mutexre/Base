@@ -13,22 +13,23 @@ namespace SG
         };
 
     private:
-        struct Stamp {
-            std::shared_ptr<React::Value<>> source;
+        template <typename T> struct Stamp
+        {
+            React::MatrixPtr<T> source;
             Rt::u8 version;
 
             Stamp() {}
 
-            Stamp(std::shared_ptr<React::Value<>> source) {
+            Stamp(React::MatrixPtr<T> source) {
                 set(source);
             }
 
-            bool match(std::shared_ptr<React::Value<>> source) {
+            bool match(const React::MatrixPtr<T> source) {
                 return this->source == source &&
                        this->version == source->getVersion();
             }
 
-            void set(std::shared_ptr<React::Value<>> source) {
+            void set(const React::MatrixPtr<T> source) {
                 this->source = source;
                 this->version = source->getVersion();
             }
@@ -36,7 +37,7 @@ namespace SG
 
     private:
         std::shared_ptr<GL::ShaderProgram> program;
-        std::map<std::string, Stamp> stamps;
+        std::map<std::string, Stamp<float>> stamps;
 
     public:
         Program(GL::ShaderProgram::Sources src,
@@ -89,7 +90,7 @@ namespace SG
             return found;
         }
 
-        void setVariable(const std::string& name, const std::shared_ptr<React::Value<>>& value)
+        void setVariable(const std::string& name, const React::MatrixPtr<>& value)
         {
             bool match = false;
 
@@ -114,7 +115,7 @@ namespace SG
                     if (stampIter != stamps.end())
                         (*stampIter).second.set(value);
                     else
-                        stamps[name] = Stamp(value);
+                        stamps[name] = Stamp<float>(value);
                 }
 #if 0
                 else

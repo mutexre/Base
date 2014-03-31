@@ -39,13 +39,13 @@ Rt::Value::Map::get(PropertyName property) const {
 void Rt::Value::Map::set(PropertyName property, std::shared_ptr<Trait> value) {
     this->container[std::string(property)] = value;
     incrementVersion();
-    notify(this);
+//    notify(this);
 }
 
 void Rt::Value::Map::erase(PropertyName property) {
     this->container.erase(std::string(property));
     incrementVersion();
-    notify(this);
+//    notify(this);
 }
 
 void Rt::Value::Map::traverseTree(std::function<void (std::shared_ptr<Trait>)> f) {

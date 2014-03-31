@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92734111187C47560019AD73 /* Value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92734106187C47290019AD73 /* Value.cpp */; };
+		9285AF2918D9BFD30066CF60 /* Scalar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92734106187C47290019AD73 /* Scalar.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		927340F5187C47290019AD73 /* Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Add.h; path = React/Add.h; sourceTree = "<group>"; };
-		927340F6187C47290019AD73 /* And.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = And.h; path = React/And.h; sourceTree = "<group>"; };
+		92167A2D18E21162005CC32A /* RangeInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeInfo.h; sourceTree = "<group>"; };
+		92167A2F18E21613005CC32A /* GetZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GetZ.h; path = MathVector/GetZ.h; sourceTree = "<group>"; };
+		925D64DC18DC8B4E00A11BA9 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		9261EB5618DB73E2000DF5C3 /* Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Add.h; sourceTree = "<group>"; };
+		926AE68D18DC98D900FDD783 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		927340F7187C47290019AD73 /* React.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = React.h; path = React/React.h; sourceTree = "<group>"; };
-		927340F9187C47290019AD73 /* Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		927340FA187C47290019AD73 /* DampedOscillator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DampedOscillator.h; sourceTree = "<group>"; };
-		927340FB187C47290019AD73 /* Inverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inverse.h; sourceTree = "<group>"; };
+		927340FB187C47290019AD73 /* InverseMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InverseMatrix.h; sourceTree = "<group>"; };
 		927340FC187C47290019AD73 /* InverseTranspose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InverseTranspose.h; sourceTree = "<group>"; };
 		927340FE187C47290019AD73 /* And.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = And.h; sourceTree = "<group>"; };
 		927340FF187C47290019AD73 /* Multiply.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Multiply.h; sourceTree = "<group>"; };
@@ -26,9 +28,12 @@
 		92734103187C47290019AD73 /* Transform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transform.h; sourceTree = "<group>"; };
 		92734104187C47290019AD73 /* Translation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Translation.h; sourceTree = "<group>"; };
 		92734105187C47290019AD73 /* Transpose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transpose.h; sourceTree = "<group>"; };
-		92734106187C47290019AD73 /* Value.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Value.cpp; path = React/Value.cpp; sourceTree = "<group>"; };
-		92734107187C47290019AD73 /* Value.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Value.h; path = React/Value.h; sourceTree = "<group>"; };
+		92734106187C47290019AD73 /* Scalar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Scalar.cpp; path = React/Scalar.cpp; sourceTree = "<group>"; };
+		92734107187C47290019AD73 /* Scalar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Scalar.h; path = React/Scalar.h; sourceTree = "<group>"; };
 		9273410C187C47430019AD73 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92ED97E618D89CDA00E69636 /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Observable.h; path = React/Observable.h; sourceTree = "<group>"; };
+		92ED97E718D89F2400E69636 /* Provider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Provider.h; path = React/Provider.h; sourceTree = "<group>"; };
+		92ED97E918D89FBB00E69636 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = React/Matrix.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92167A2E18E21540005CC32A /* MathVector */ = {
+			isa = PBXGroup;
+			children = (
+				92167A2F18E21613005CC32A /* GetZ.h */,
+			);
+			name = MathVector;
+			sourceTree = "<group>";
+		};
 		927340EC187C46D40019AD73 = {
 			isa = PBXGroup;
 			children = (
@@ -54,10 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				927340F8187C47290019AD73 /* Transform */,
-				927340F5187C47290019AD73 /* Add.h */,
-				927340F6187C47290019AD73 /* And.h */,
-				92734107187C47290019AD73 /* Value.h */,
-				92734106187C47290019AD73 /* Value.cpp */,
+				92ED97E718D89F2400E69636 /* Provider.h */,
+				92ED97E618D89CDA00E69636 /* Observable.h */,
+				92734107187C47290019AD73 /* Scalar.h */,
+				92734106187C47290019AD73 /* Scalar.cpp */,
+				92ED97E918D89FBB00E69636 /* Matrix.h */,
 				927340F7187C47290019AD73 /* React.h */,
 			);
 			name = Sources;
@@ -67,18 +81,22 @@
 		927340F8187C47290019AD73 /* Transform */ = {
 			isa = PBXGroup;
 			children = (
+				92167A2E18E21540005CC32A /* MathVector */,
 				927340FD187C47290019AD73 /* Logic */,
-				927340F9187C47290019AD73 /* Animation.h */,
+				92734103187C47290019AD73 /* Transform.h */,
+				926AE68D18DC98D900FDD783 /* Macro.h */,
 				927340FA187C47290019AD73 /* DampedOscillator.h */,
-				927340FB187C47290019AD73 /* Inverse.h */,
+				927340FB187C47290019AD73 /* InverseMatrix.h */,
 				927340FC187C47290019AD73 /* InverseTranspose.h */,
 				927340FF187C47290019AD73 /* Multiply.h */,
 				92734100187C47290019AD73 /* MultiplyByScalar.h */,
+				9261EB5618DB73E2000DF5C3 /* Add.h */,
 				92734101187C47290019AD73 /* Negate.h */,
 				92734102187C47290019AD73 /* SubMatrix.h */,
-				92734103187C47290019AD73 /* Transform.h */,
 				92734104187C47290019AD73 /* Translation.h */,
 				92734105187C47290019AD73 /* Transpose.h */,
+				925D64DC18DC8B4E00A11BA9 /* Box.h */,
+				92167A2D18E21162005CC32A /* RangeInfo.h */,
 			);
 			name = Transform;
 			path = React/Transform;
@@ -160,7 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92734111187C47560019AD73 /* Value.cpp in Sources */,
+				9285AF2918D9BFD30066CF60 /* Scalar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,7 +4,7 @@
 namespace SG
 {
     template <typename T>
-    class Order : public Rt::Observable<>
+    class Order : public React::Observable<1>
     {
     private:
         std::list<Rt::Either<T, std::shared_ptr<Order>>> children;

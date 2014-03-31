@@ -3,14 +3,22 @@
 
 namespace React
 {
-    template <typename T = float>
-    class Negate : public Transform<T, Negate<T>>
+    template <typename T>
+    class Negate : public Transform<Negate<T>>
     {
+        REACT_DEFINE_INPUT(ScalarPtr<T>, input, getInput, setInput, &Negate::invalidate)
+        REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &Negate::evaluate)
+
     protected:
-        virtual void evaluate() {
-            if (!this->input[0]->get().empty()) {
-                this->output[0]->set(this->input[0]->get().multiplyByScalar(T(-1)));
-                this->output[0]->commit(true, false);
+        void evaluate() {
+            this->output->set((-1) * input->get());
+            this->output->commit(false);
+        }
+
+        void invalidate() {
+            if (output.get()) {
+                output->invalidate();
+                output->notify(this);
             }
         }
     };

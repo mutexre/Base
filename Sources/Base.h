@@ -5,5 +5,8 @@
 #include <Math/Math.h>
 #include <React/React.h>
 #include <Color/Color.h>
+#include <GLCPP/GL.h>
+#include <SceneGraph/SceneGraph.h>
+#include <UI/UI.h>
 
 #endif

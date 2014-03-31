@@ -3,16 +3,24 @@
 
 namespace React
 {
-    template <typename T = float>
-    class Transpose : public Transform<T, Transpose<T>>
+    template <typename T>
+    class Transpose : public Transform<Transpose<T>>
     {
+        REACT_DEFINE_INPUT(MatrixPtr<T>, input, getInput, setInput, &Transpose::invalidate)
+        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &Transpose::evaluate)
+
     protected:
-        virtual void evaluate() {
-            if (!this->input[0]->get().empty()) {
-                auto result = Math::Matrix<T>::getTransposed(this->input[0]->get());
-                this->output[0]->set(result);
-                this->output[0]->commit(true, false);
-                //printf("transpose: "); result.printMatrix();
+        void evaluate() {
+            auto result = Math::Matrix<T>::getTransposed(this->input->get());
+            this->output->set(result);
+            this->output->commit(false);
+            //printf("transpose: "); result.printMatrix();
+        }
+
+        void invalidate() {
+            if (output.get()) {
+                output->invalidate();
+                output->notify(this);
             }
         }
     };

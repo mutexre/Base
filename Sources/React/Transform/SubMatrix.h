@@ -3,18 +3,26 @@
 
 namespace React
 {
-    template <typename T = float, typename I = Rt::u1>
-    class SubMatrix : public Transform<T, SubMatrix<T, I>>
+    template <typename T, typename I = Rt::u1>
+    class SubMatrix : public Transform<SubMatrix<T, I>>
     {
-    private:
+        REACT_DEFINE_INPUT(MatrixPtr<T>, input, getInput, setInput, &SubMatrix::invalidate)
+        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &SubMatrix::evaluate)
+
+    protected:
         I size, rowOffset, columnOffset;
 
     protected:
-        virtual void evaluate() {
-            if (!this->input[0]->get().empty()) {
-                auto& matrix = this->input[0]->get();
-                this->output[0]->set(matrix.getSubMatrix(size));
-                this->output[0]->commit(true, false);
+        void evaluate() {
+            auto& matrix = input->get();
+            this->output->set(matrix.getSubMatrix(size));
+            this->output->commit(false);
+        }
+
+        void invalidate() {
+            if (output.get()) {
+                output->invalidate();
+                output->notify(this);
             }
         }
 
@@ -23,6 +31,7 @@ namespace React
             this->size = size;
             this->rowOffset = rowOffset;
             this->columnOffset = columnOffset;
+            output->set(Math::makeMatrix(size));
         }
     };
 }

@@ -3,27 +3,33 @@
 
 namespace React
 {
-    template <typename T = float>
-    class InverseTranspose : public Transform<T, InverseTranspose<T>>
+    template <typename T>
+    class InverseTranspose : public Transform<InverseTranspose<T>>
     {
+        REACT_DEFINE_INPUT(MatrixPtr<T>, input, getInput, setInput, &InverseTranspose::invalidate)
+        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &InverseTranspose::evaluate)
+
     protected:
-        virtual void evaluate() {
-            if (!this->input[0]->get().empty()) {
+        void evaluate() {
 #if 0
-                auto inversed = Math::Matrix<T>::getInversed(this->input[0]->get());
-                if (inversed.defined) {
-                    auto result = Math::Matrix<T>::getTransposed(inversed.get());
-                    this->output[0]->set(result);
-                    //printf("inv transpose: "); result.printMatrix();
-                }
+            auto inversed = Math::Matrix<T>::getInversed(this->input->get());
+            if (inversed.defined) {
+                auto result = Math::Matrix<T>::getTransposed(inversed.get());
+                this->output->set(result);
+            }
 #else
-                auto result = Math::Matrix<T>::getInversed(Math::Matrix<T>::getTransposed(this->input[0]->get()));
-                if (result.defined) {
-                    this->output[0]->set(result.get());
-                    this->output[0]->commit(true, false);
-                    //printf("inv transpose: "); result.printMatrix();
-                }
+            auto result = Math::Matrix<T>::getInversed(Math::Matrix<T>::getTransposed(this->input->get()));
+            if (result.defined) {
+                this->output->set(result.get());
+                this->output->commit(false);
+            }
 #endif
+        }
+
+        void invalidate() {
+            if (output.get()) {
+                output->invalidate();
+                output->notify(this);
             }
         }
     };

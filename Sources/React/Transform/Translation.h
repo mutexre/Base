@@ -3,14 +3,24 @@
 
 namespace React
 {
-    template <typename T = float>
-    class Translation : public Transform<T, Translation<T>>
+    template <typename T>
+    class Translation : public Transform<Translation<T>>
     {
+        REACT_DEFINE_INPUT(ScalarPtr<T>, x, getX, setX, &Translation::invalidate)
+        REACT_DEFINE_INPUT(ScalarPtr<T>, y, getY, setY, &Translation::invalidate)
+        REACT_DEFINE_INPUT(ScalarPtr<T>, z, getZ, setZ, &Translation::invalidate)
+        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &Translation::evaluate)
+
     protected:
-        virtual void evaluate() {
-            if (this->input.size() == 3 && !this->isThereEmptyInput()) {
-                this->output[0]->set(Math::Translation<T>(this->input[0]->get().get(), this->input[1]->get().get(), this->input[2]->get().get()));
-                this->output[0]->commit(true, false);
+        void evaluate() {
+            this->output->set(Math::Translation<T>(this->x->get(), this->y->get(), this->z->get()));
+            this->output->commit(false);
+        }
+
+        void invalidate() {
+            if (output.get()) {
+                output->invalidate();
+                output->notify(this);
             }
         }
     };
