@@ -11,6 +11,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92044686191C144A0017230E /* GetX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GetX.h; path = MathVector/GetX.h; sourceTree = "<group>"; };
+		92044687191C144A0017230E /* GetY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GetY.h; path = MathVector/GetY.h; sourceTree = "<group>"; };
 		92167A2D18E21162005CC32A /* RangeInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RangeInfo.h; sourceTree = "<group>"; };
 		92167A2F18E21613005CC32A /* GetZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GetZ.h; path = MathVector/GetZ.h; sourceTree = "<group>"; };
 		925D64DC18DC8B4E00A11BA9 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		92167A2E18E21540005CC32A /* MathVector */ = {
 			isa = PBXGroup;
 			children = (
+				92044686191C144A0017230E /* GetX.h */,
+				92044687191C144A0017230E /* GetY.h */,
 				92167A2F18E21613005CC32A /* GetZ.h */,
 			);
 			name = MathVector;

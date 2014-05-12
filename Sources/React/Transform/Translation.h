@@ -18,10 +18,8 @@ namespace React
         }
 
         void invalidate() {
-            if (output.get()) {
+            if (output.get())
                 output->invalidate();
-                output->notify(this);
-            }
         }
     };
 }

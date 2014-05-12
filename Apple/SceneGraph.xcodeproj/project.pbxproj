@@ -40,12 +40,14 @@
 		922A27A518802E8C005FB912 /* StandardTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandardTransforms.h; path = ../Sources/SceneGraph/StandardTransforms.h; sourceTree = "<group>"; };
 		922A27A618802E8C005FB912 /* UniformBlockBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UniformBlockBinding.h; path = ../Sources/SceneGraph/UniformBlockBinding.h; sourceTree = "<group>"; };
 		922A27A718802E8C005FB912 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = View.h; path = ../Sources/SceneGraph/View.h; sourceTree = "<group>"; };
+		924A9F3718EAB15F00ABACC4 /* BindData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BindData.h; path = ../Sources/SceneGraph/BindData.h; sourceTree = "<group>"; };
 		9270C94917C0214C00EFA781 /* libSceneGraph.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSceneGraph.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		927B3FF418895F5B006948D5 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Data.h; path = ../Sources/SceneGraph/Data.h; sourceTree = "<group>"; };
 		927B3FF5188A66E2006948D5 /* Implementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Implementation.h; path = ../Sources/SceneGraph/Implementation.h; sourceTree = "<group>"; };
 		927CF28F1892BB7700720076 /* DataBinding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataBinding.h; path = ../Sources/SceneGraph/DataBinding.h; sourceTree = "<group>"; };
 		9288CF7318943FB700452C1C /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Data.h; path = ../Sources/SceneGraph/Topological/Data.h; sourceTree = "<group>"; };
 		9288CF7418943FCE00452C1C /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Object.h; path = ../Sources/SceneGraph/Topological/Object.h; sourceTree = "<group>"; };
+		92C4B6CE18EA8E8A007E069C /* Piece.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Piece.h; path = ../Sources/SceneGraph/Piece.h; sourceTree = "<group>"; };
 		92D747A317C512F300CE662B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		92D747A617C512F300CE662B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		92D747A717C512F300CE662B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -83,7 +85,9 @@
 				922A279618802E8C005FB912 /* Buffer.h */,
 				927B3FF418895F5B006948D5 /* Data.h */,
 				927CF28F1892BB7700720076 /* DataBinding.h */,
+				924A9F3718EAB15F00ABACC4 /* BindData.h */,
 				922A279818802E8C005FB912 /* DrawCall.h */,
+				92C4B6CE18EA8E8A007E069C /* Piece.h */,
 				922A279B18802E8C005FB912 /* Material.h */,
 				922A27A418802E8C005FB912 /* Segment.h */,
 				922A279E18802E8C005FB912 /* Object.h */,

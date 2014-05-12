@@ -36,6 +36,10 @@ namespace SG
             elements = buffer;
         }
 
+        const Attributes& getAttributes() const {
+            return attributes;
+        }
+
         Attributes& getAttributes() {
             return attributes;
         }

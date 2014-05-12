@@ -37,13 +37,23 @@ namespace SG
         DrawCall() {}
 
         DrawCall(GLenum mode, GLint first, GLsizei count) {
+            init(mode, first, count);
+        }
+
+        DrawCall(GLenum mode, GLsizei count, GLenum type, GLsizeiptr indicesOffsetInBytes, GLsizei numberOfInstances = 1, GLint baseVertex = 0) {
+            init(mode, count, type, indicesOffsetInBytes, numberOfInstances, baseVertex);
+        }
+
+        virtual ~DrawCall() {}
+
+        void init(GLenum mode, GLint first, GLsizei count) {
             kind = Kind::arrays;
             arrays.mode = mode;
             arrays.first = first;
             arrays.count = count;
         }
 
-        DrawCall(GLenum mode, GLsizei count, GLenum type, GLsizeiptr indicesOffsetInBytes, GLsizei numberOfInstances = 1, GLint baseVertex = 0) {
+        void init(GLenum mode, GLsizei count, GLenum type, GLsizeiptr indicesOffsetInBytes, GLsizei numberOfInstances = 1, GLint baseVertex = 0) {
             kind = Kind::elements;
             elements.mode = mode;
             elements.count = count;
@@ -52,8 +62,6 @@ namespace SG
             elements.numberOfInstances = numberOfInstances;
             elements.baseVertex = baseVertex;
         }
-
-        virtual ~DrawCall() {}
 
         virtual void operator()() {
             switch (kind) {

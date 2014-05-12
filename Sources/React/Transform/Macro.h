@@ -6,25 +6,25 @@
         return var;\
     }
 
-#define REACT_DEFINE_INPUT_SETTER(type, var, name, callback)\
+#define REACT_DEFINE_INPUT_SETTER(type, var, name, invalidator)\
     void name(type value) {\
         auto previousVar = this->var;\
         auto iter = this->invalidators.find(previousVar.get());\
         if (iter != this->invalidators.end())\
             this->invalidators.erase(iter);\
-        this->invalidators[value.get()] = callback;\
+        this->invalidators[value.get()] = invalidator; \
         this->var = value;\
         connections_##var = this->observe(value.get());\
-        (this->*callback)();\
+        (this->*invalidator)();\
     }
 
-#define REACT_DEFINE_INPUT(type, var, getter, setter, callback)\
+#define REACT_DEFINE_INPUT(type, var, getter, setter, invalidator)\
 protected:\
     type var;\
     React::Observable<2>::Connection connections_##var;\
 public:\
     REACT_DEFINE_GETTER(type, var, getter)\
-    REACT_DEFINE_INPUT_SETTER(type, var, setter, callback)
+    REACT_DEFINE_INPUT_SETTER(type, var, setter, invalidator)
 
 #define REACT_DEFINE_OUTPUT_SETTER(type, var, name, evalFunc)\
     void name(type value) {\
@@ -35,8 +35,7 @@ public:\
         this->evaluators[value.get()] = evalFunc;\
         this->var = value;\
         value->setProvider(this->shared_from_this());\
-        value->setValidity(false);\
-        value->notify(this);\
+        value->notify(value.get());\
     }
 
 #define REACT_DEFINE_OUTPUT(type, var, getter, setter, evalFunc)\
@@ -89,8 +88,7 @@ public:\
         this->evaluators[value.get()] = evalFunc;\
         this->var[index] = value;\
         value->setProvider(this->shared_from_this());\
-        value->setValidity(false);\
-        value->notify(this);\
+        value->notify(value.get());\
     }
 
 #define REACT_DEFINE_OUTPUT_VECTOR_ADDER(type, var, name, evalFunc)\
@@ -98,8 +96,7 @@ public:\
         this->evaluators[value.get()] = evalFunc;\
         this->var.push_back(value);\
         value->setProvider(this->shared_from_this());\
-        value->setValidity(false);\
-        value->notify(this);\
+        value->notify(value.get());\
     }
 
 #define REACT_DEFINE_VECTOR_OUTPUT(type, var, getter, setter, adder, evalFunc)\

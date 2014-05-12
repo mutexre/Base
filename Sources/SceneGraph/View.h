@@ -158,21 +158,21 @@ namespace SG
                             segmentVisible = iter->second->get();
 
                         if (segmentVisible) {
-                            auto program = segment->getProgram();
-                            program->bind();
+                            auto& programValue = segment->getProgram()->value();
+                            programValue->bind();
 
                             for (auto& binding : bindings.global)
-                                program->setVariable(binding.first, binding.second);
+                                programValue->setVariable(binding.first, binding.second);
 
                             for (auto& binding : bindings.perObject[object])
-                                program->setVariable(binding.first, binding.second);
+                                programValue->setVariable(binding.first, binding.second);
 
                             for (auto& binding : bindings.perObjectAndSegment[object][segment])
-                                program->setVariable(binding.first, binding.second);
+                                programValue->setVariable(binding.first, binding.second);
 
                             segment->render();
 
-                            program->unbind();
+                            programValue->unbind();
                         }
                     }
             }

@@ -33,7 +33,9 @@ namespace SG
 #include <SceneGraph/Buffer.h>
 #include <SceneGraph/Data.h>
 #include <SceneGraph/DataBinding.h>
+#include <SceneGraph/BindData.h>
 #include <SceneGraph/DrawCall.h>
+#include <SceneGraph/Piece.h>
 #include <SceneGraph/Material.h>
 #include <SceneGraph/UniformBlockBinding.h>
 #include <SceneGraph/Segment.h>

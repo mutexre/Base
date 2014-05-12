@@ -24,6 +24,8 @@
 #include <React/Transform/DampedOscillator.h>
 #include <React/Transform/Box.h>
 #include <React/Transform/RangeInfo.h>
+#include <React/Transform/MathVector/GetX.h>
+#include <React/Transform/MathVector/GetY.h>
 #include <React/Transform/MathVector/GetZ.h>
 
 #endif

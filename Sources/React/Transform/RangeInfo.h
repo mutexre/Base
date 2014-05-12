@@ -13,31 +13,33 @@ namespace React
 
     private:
         void evaluate() {
-            a->set(range->get().a);
-            a->commit(false);
+            auto& rangeVal = range->get();
 
-            b->set(range->get().b);
-            b->commit(false);
-
-            length->set(range->get().length());
-            length->commit(false);
-        }
-
-        void invalidate() {
             if (a.get()) {
-                a->invalidate();
-                a->notify(this);
+                a->set(rangeVal.a);
+                a->commit(false);
             }
 
             if (b.get()) {
-                b->invalidate();
-                b->notify(this);
+                b->set(rangeVal.b);
+                b->commit(false);
             }
 
             if (length.get()) {
-                length->invalidate();
-                length->notify(this);
+                length->set(rangeVal.length());
+                length->commit(false);
             }
+        }
+
+        void invalidate() {
+            if (a.get())
+                a->invalidate();
+
+            if (b.get())
+                b->invalidate();
+
+            if (length.get())
+                length->invalidate();
         }
     };
 }

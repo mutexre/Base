@@ -30,6 +30,11 @@ namespace React
             return var->addObserver(Observable<2>::Observer(&Transform::inputDidChange, this, _1).track_foreign(this->shared_from_this()));
         }
 
+        template <typename T>
+        void commit(T& output) {
+            output->commit(false);
+        }
+
     public:
         Transform() {}
 

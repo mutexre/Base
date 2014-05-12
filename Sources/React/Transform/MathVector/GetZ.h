@@ -13,15 +13,13 @@ namespace React
 
         protected:
             void evaluate() {
-                this->output->set(input->get().x);
+                this->output->set(input->get().z);
                 this->output->commit(false);
             }
 
             void invalidate() {
-                if (output.get()) {
+                if (output.get())
                     output->invalidate();
-                    output->notify(this);
-                }
             }
         };
     }

@@ -130,27 +130,19 @@ namespace React
         }
 
         void invalidateTimeDependants() {
-            if (x.get()) {
+            if (x.get())
                 x->invalidate();
-                x->notify(this);
-            }
         }
 
         void invalidateOthers() {
-            if (x.get()) {
+            if (x.get())
                 x->invalidate();
-                x->notify(this);
-            }
 
-            if (behaviour.get()) {
+            if (behaviour.get())
                 behaviour->invalidate();
-                behaviour->notify(this);
-            }
 
-            if (finalDisplacement.get()) {
+            if (finalDisplacement.get())
                 finalDisplacement->invalidate();
-                finalDisplacement->notify(this);
-            }
         }
 
     public:

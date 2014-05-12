@@ -6,53 +6,14 @@ namespace SG
     class Segment
     {
     public:
-        class Piece
-        {
-        protected:
-            std::shared_ptr<DataBinding> dataBinding;
-            std::shared_ptr<DrawCall> drawCall;
-
-        public:
-            Piece() {}
-
-            Piece(std::shared_ptr<DataBinding> dataBinding, std::shared_ptr<DrawCall> drawCall) {
-                this->dataBinding = dataBinding;
-                this->drawCall = drawCall;
-            }
-
-            virtual ~Piece() {}
-
-            std::shared_ptr<DataBinding> getDataBinding() const {
-                return dataBinding;
-            }
-
-            void setDataBinding(std::shared_ptr<DataBinding> dataBinding) {
-                this->dataBinding = dataBinding;
-            }
-
-            std::shared_ptr<DrawCall> getDrawCall() const {
-                return drawCall;
-            }
-
-            void setDrawCall(std::shared_ptr<DrawCall> drawCall) {
-                this->drawCall = drawCall;
-            }
-
-            void render() {
-                dataBinding->prepare();
-                (*drawCall)();
-                dataBinding->complete();
-            }
-        };
-
         using Pieces = std::list<Piece>;
-        using Bindings = multi_index_container<UniformBlockBinding, indexed_by<ordered_unique<member<UniformBlockBinding, GLuint, &UniformBlockBinding::point>>>>;
+        using UniformBlockBindings = multi_index_container<UniformBlockBinding, indexed_by<ordered_unique<member<UniformBlockBinding, GLuint, &UniformBlockBinding::point>>>>;
 
     private:
         Pieces pieces;
-        std::shared_ptr<Program> program;
-        std::shared_ptr<Material> material;
-        Bindings bindings;
+        React::ScalarPtr<std::shared_ptr<Program>> program;
+        React::ScalarPtr<std::shared_ptr<Material>> material;
+        UniformBlockBindings bindings;
         struct {
             bool enableDepthTest;
         }
@@ -61,8 +22,8 @@ namespace SG
     public:
         Segment() {}
 
-        Segment(std::shared_ptr<Program> program,
-                std::shared_ptr<Material> material,
+        Segment(React::ScalarPtr<std::shared_ptr<Program>> program,
+                React::ScalarPtr<std::shared_ptr<Material>> material,
                 bool enableDepthTest = true)
         {
             this->program = program;
@@ -70,28 +31,30 @@ namespace SG
             flags.enableDepthTest = enableDepthTest;
         }
 
-        Segment(Pieces pieces,
-                std::shared_ptr<Program> program,
-                std::shared_ptr<Material> material,
+        template <typename Iterator>
+        Segment(Iterator begin, Iterator end,
+                React::ScalarPtr<std::shared_ptr<Program>> program,
+                React::ScalarPtr<std::shared_ptr<Material>> material,
                 bool enableDepthTest = true)
             : Segment(program, material, enableDepthTest)
         {
-            this->pieces = pieces;
+            for (auto iter = begin; iter != end; iter++)
+                this->pieces.push_back(*iter);
         }
 
         Segment(Piece piece,
-                std::shared_ptr<Program> program,
-                std::shared_ptr<Material> material,
+                React::ScalarPtr<std::shared_ptr<Program>> program,
+                React::ScalarPtr<std::shared_ptr<Material>> material,
                 bool enableDepthTest = true)
             : Segment(program, material, enableDepthTest)
         {
             pieces.push_back(piece);
         }
 
-        Segment(std::shared_ptr<DataBinding> dataBinding,
-                std::shared_ptr<DrawCall> drawCall,
-                std::shared_ptr<Program> program,
-                std::shared_ptr<Material> material,
+        Segment(React::ScalarPtr<std::shared_ptr<DataBinding>> dataBinding,
+                React::ScalarPtr<std::shared_ptr<DrawCall>> drawCall,
+                React::ScalarPtr<std::shared_ptr<Program>> program,
+                React::ScalarPtr<std::shared_ptr<Material>> material,
                 bool enableDepthTest = true)
             : Segment(program, material, enableDepthTest)
         {
@@ -109,24 +72,24 @@ namespace SG
             this->pieces = pieces;
         }
 
-        std::shared_ptr<Program> getProgram() const {
+        React::ScalarPtr<std::shared_ptr<Program>> getProgram() const {
             return program;
         }
 
-        void setProgram(std::shared_ptr<Program> program) {
+        void setProgram(React::ScalarPtr<std::shared_ptr<Program>> program) {
             this->program = program;
         }
 
-        std::shared_ptr<Material> getMaterial() const {
+        React::ScalarPtr<std::shared_ptr<Material>> getMaterial() const {
             return material;
         }
 
-        void setMaterial(std::shared_ptr<Material> material) {
+        void setMaterial(React::ScalarPtr<std::shared_ptr<Material>> material) {
             this->material = material;
         }
 
         void add(GLuint bindingPoint, std::shared_ptr<Buffer> buffer,
-                    Rt::Option<Rt::Range<Rt::u4>> range = Rt::Option<Rt::Range<Rt::u4>>())
+                 Rt::Option<Rt::Range<Rt::u4>> range = Rt::Option<Rt::Range<Rt::u4>>())
         {
             UniformBlockBinding binding;
             binding.point = bindingPoint;
@@ -153,13 +116,13 @@ namespace SG
 
 // Bind/unbind uniform block buffer
         void bindUniformBlockBuffer(const std::string& name) {
-            auto bindingPoint = program->get()->getUniformBlockBinding(name);
+            auto bindingPoint = program->value()->get()->getUniformBlockBinding(name);
             if (bindingPoint.defined) bindUniformBlockBuffer(bindingPoint.get());
             else Rt::error(0x45464323);
         }
 
         void unbindUniformBlockBuffer(const std::string& name) {
-            auto bindingPoint = program->get()->getUniformBlockBinding(name);
+            auto bindingPoint = program->value()->get()->getUniformBlockBinding(name);
             if (bindingPoint.defined) unbindUniformBlockBuffer(bindingPoint.get());
             else Rt::error(0x8600462C);
         }
@@ -182,7 +145,7 @@ namespace SG
 
 // Map/unmap uniform block buffer
         Rt::u1* mapUniformBlockBuffer(const std::string& name, GL::Buffer::Access access) {
-            auto bindingPoint = program->get()->getUniformBlockBinding(name);
+            auto bindingPoint = program->value()->get()->getUniformBlockBinding(name);
             if (bindingPoint.defined)
                 return mapUniformBlockBuffer(bindingPoint.get(), access);
             else
@@ -192,7 +155,7 @@ namespace SG
         }
 
         void unmapUniformBlockBuffer(const std::string& name) {
-            auto bindingPoint = program->get()->getUniformBlockBinding(name);
+            auto bindingPoint = program->value()->get()->getUniformBlockBinding(name);
             if (bindingPoint.defined)
                 unmapUniformBlockBuffer(bindingPoint.get());
             else
@@ -224,7 +187,7 @@ namespace SG
             for (auto iter = bindings.begin(); iter != bindings.end(); iter++)
                 bindings.modify(iter, [](UniformBlockBinding& b) { b.bind(); });
 
-            material->applyTo(program);
+            material->value()->applyTo(program->value());
 
             if (flags.enableDepthTest)
                 glEnable(GL_DEPTH_TEST);

@@ -11,20 +11,13 @@ namespace React
 
     protected:
         void evaluate() {
-            this->output->get().set(0, input->get());
+            this->output->currentValue().set(0, input->get());
             this->output->commit(false);
         }
 
         void invalidate() {
-            if (output.get()) {
+            if (output.get())
                 output->invalidate();
-                output->notify(this);
-            }
-        }
-
-    public:
-        Box() {
-            output->set(Math::makeScalar<T>());
         }
     };
 }

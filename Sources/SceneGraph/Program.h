@@ -48,7 +48,7 @@ namespace SG
             program = std::make_shared<GL::ShaderProgram>(src, fragDataLocations, separate, interleaved);
         }
 
-        std::shared_ptr<GL::ShaderProgram> get() {
+        std::shared_ptr<GL::ShaderProgram> get() const {
             return program;
         }
 

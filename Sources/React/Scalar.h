@@ -9,7 +9,7 @@ namespace React
                    public Observable<2>
     {
     protected:
-        T value;
+        T val;
         bool valid;
         std::weak_ptr<Provider> provider;
 
@@ -28,30 +28,40 @@ namespace React
         }
 
     public:
-        Scalar() {}
+        Scalar() {
+            setValidity(true);
+        }
 
-        Scalar(T value) {
-            this->value = value;
+        Scalar(T value) : Scalar() {
+            this->val = value;
         }
 
         virtual ~Scalar() {};
 
         virtual T& get() {
             evaluateIfNeeded();
-            return value;
+            return val;
+        }
+
+        virtual T& value() {
+            return get();
+        }
+
+        virtual T& currentValue() {
+            return val;
         }
 
         virtual void set(T value) {
-            this->value = value;
+            this->val = value;
         }
 
         void setProvider(std::shared_ptr<Provider> provider) {
             this->provider = provider;
+            setValidity(false);
         }
 
         void setValidity(bool value) {
             valid = value;
-            //this->notify(valid ? 0 : 1, this);
         }
 
         bool isValid() const {
@@ -62,6 +72,11 @@ namespace React
             incrementVersion();
             setValidity(true);
             if (notify) this->notify(this);
+        }
+
+        virtual void invalidate() {
+            setValidity(false);
+            this->notify(this);
         }
     };
 
@@ -75,13 +90,18 @@ namespace React
     using ScalarWeakPtr = std::weak_ptr<Scalar<T>>;
 
     template <typename T = float>
-    ScalarPtr<T> makeScalar() {
+    ScalarPtr<T> makeScalarPtr() {
         return std::make_shared<Scalar<T>>();
     }
 
     template <typename T = float>
-    ScalarPtr<T> makeScalar(T value) {
+    ScalarPtr<T> makeScalarPtr(T value) {
         return std::make_shared<Scalar<T>>(value);
+    }
+
+    template <typename T, typename ...Args>
+    ScalarPtr<T> makeScalarPtr(Args&& ...args) {
+        return std::make_shared<Scalar<T>>(T(args...));
     }
 }
 
