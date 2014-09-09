@@ -48,6 +48,10 @@ namespace SG
             attributes = attrs;
         }
 
+        void clearAttrs() {
+            attributes.clear();
+        }
+
         ArrayState& getAttr(const std::string& name) {
             return attributes[name];
         }

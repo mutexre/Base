@@ -1,145 +1,145 @@
 #include <GLCPP/GL.h>
 
-GL::VertexArrayKit::VertexArrayKit(Options points,
-                                   Options lines,
-                                   Options triangles)
+GL::VertexArrayKit::VertexArrayKit(Options d0,
+                                   Options d1,
+                                   Options d2)
 {
-    setPointsOptions(points);
-    setLinesOptions(lines);
-    setTrianglesOptions(triangles);
+    setPointsOptions(d0);
+    setLinesOptions(d1);
+    setTrianglesOptions(d2);
 }
 
 void GL::VertexArrayKit::render()
 {
 #if defined __APPLE__ && TARGET_OS_IPHONE
-    if (lines.enabled) {
-        lines.bind();
+    if (d1.enabled) {
+        d1.bind();
         glDrawElements(GL_LINES,
-                       verticesPerTriangle * lines.count,
-                       lines.type,
-                       (const GLchar*)lines.offset);
+                       verticesPerTriangle * d1.count,
+                       d1.type,
+                       (const GLchar*)d1.offset);
     }
 
-    if (triangles.enabled) {
-        triangles.bind();
+    if (d2.enabled) {
+        d2.bind();
         glDrawElements(GL_TRIANGLES,
-                       verticesPerTriangle * triangles.count,
-                       triangles.type,
-                       (const GLchar*)triangles.offset);
+                       verticesPerTriangle * d2.count,
+                       d2.type,
+                       (const GLchar*)d2.offset);
     }
 #else
-        if (triangles.enabled)
+        if (d2.enabled)
         {
-            triangles.bind();
-            if (triangles.baseVertex > 0) {
-                if (triangles.numberOfInstances > 1)
+            d2.bind();
+            if (d2.baseVertex > 0) {
+                if (d2.numberOfInstances > 1)
                     glDrawElementsInstancedBaseVertex(GL_TRIANGLES,
-                                                      verticesPerTriangle * triangles.count,
-                                                      triangles.type,
-                                                      (const GLchar*)triangles.offset,
-                                                      triangles.numberOfInstances,
-                                                      triangles.baseVertex);
+                                                      verticesPerTriangle * d2.count,
+                                                      d2.type,
+                                                      (const GLchar*)d2.offset,
+                                                      d2.numberOfInstances,
+                                                      d2.baseVertex);
                 else
                     glDrawElementsBaseVertex(GL_TRIANGLES,
-                                             verticesPerTriangle * triangles.count,
-                                             triangles.type,
-                                             (const GLchar*)triangles.offset,
-                                             triangles.baseVertex);
+                                             verticesPerTriangle * d2.count,
+                                             d2.type,
+                                             (const GLchar*)d2.offset,
+                                             d2.baseVertex);
             }
             else {
-                if (triangles.numberOfInstances > 1)
+                if (d2.numberOfInstances > 1)
                     glDrawElementsInstanced(GL_TRIANGLES,
-                                            GL::verticesPerTriangle * triangles.count,
-                                            triangles.type,
-                                            (const GLchar*)triangles.offset,
-                                            triangles.numberOfInstances);
+                                            GL::verticesPerTriangle * d2.count,
+                                            d2.type,
+                                            (const GLchar*)d2.offset,
+                                            d2.numberOfInstances);
                 else
                     glDrawElements(GL_TRIANGLES,
-                                   GL::verticesPerTriangle * triangles.count,
-                                   triangles.type,
-                                   (const GLchar*)triangles.offset);
+                                   GL::verticesPerTriangle * d2.count,
+                                   d2.type,
+                                   (const GLchar*)d2.offset);
             }
         }
 
-        if (lines.enabled)
+        if (d1.enabled)
         {
-            lines.bind();
-            if (lines.baseVertex > 0)
+            d1.bind();
+            if (d1.baseVertex > 0)
             {
-                if (lines.numberOfInstances > 1)
+                if (d1.numberOfInstances > 1)
                     glDrawElementsInstancedBaseVertex(GL_LINES,
-                                                      GL::verticesPerEdge * lines.count,
-                                                      lines.type,
-                                                      (const GLchar*)lines.offset,
-                                                      lines.numberOfInstances,
-                                                      lines.baseVertex);
+                                                      GL::verticesPerEdge * d1.count,
+                                                      d1.type,
+                                                      (const GLchar*)d1.offset,
+                                                      d1.numberOfInstances,
+                                                      d1.baseVertex);
                 else
                     glDrawElementsBaseVertex(GL_LINES,
-                                             GL::verticesPerEdge * lines.count,
-                                             lines.type,
-                                             (const GLchar*)lines.offset,
-                                             lines.baseVertex);
+                                             GL::verticesPerEdge * d1.count,
+                                             d1.type,
+                                             (const GLchar*)d1.offset,
+                                             d1.baseVertex);
             }
             else {
-                if (lines.numberOfInstances > 1)
+                if (d1.numberOfInstances > 1)
                     glDrawElementsInstanced(GL_LINES,
-                                            GL::verticesPerEdge * lines.count,
-                                            lines.type,
-                                            (const GLchar*)lines.offset,
-                                            lines.numberOfInstances);
+                                            GL::verticesPerEdge * d1.count,
+                                            d1.type,
+                                            (const GLchar*)d1.offset,
+                                            d1.numberOfInstances);
                 else
                     glDrawElements(GL_LINES,
-                                   GL::verticesPerEdge * lines.count,
-                                   lines.type,
-                                   (const GLchar*)lines.offset);
+                                   GL::verticesPerEdge * d1.count,
+                                   d1.type,
+                                   (const GLchar*)d1.offset);
             }
         }
 #endif
 
-    if (points.enabled) {
-        points.bind();
-        glDrawArrays(GL_POINTS, points.offset, points.count);
+    if (d0.enabled) {
+        d0.bind();
+        glDrawArrays(GL_POINTS, d0.offset, d0.count);
     }
 }
 
 GL::VertexArrayKit::Options GL::VertexArrayKit::getPointsOptions() const {
-    return points;
+    return d0;
 }
 
 void GL::VertexArrayKit::setPointsOptions(Options options) {
-    points = options;
+    d0 = options;
 }
 
 void GL::VertexArrayKit::setPointsShaderProgram(std::shared_ptr<ShaderProgram> program) {
-    points.program = program;
+    d0.program = program;
 }
 
 GL::VertexArrayKit::Options GL::VertexArrayKit::getLinesOptions() const {
-    return lines;
+    return d1;
 }
 
 void GL::VertexArrayKit::setLinesOptions(Options options) {
-    lines = options;
+    d1 = options;
 }
 
 void GL::VertexArrayKit::setLinesShaderProgram(std::shared_ptr<ShaderProgram> program) {
-    lines.program = program;
+    d1.program = program;
 }
 
 GL::VertexArrayKit::Options GL::VertexArrayKit::getTrianglesOptions() const {
-    return triangles;
+    return d2;
 }
 
 void GL::VertexArrayKit::setTrianglesOptions(Options options) {
-    triangles = options;
+    d2 = options;
 }
 
 void GL::VertexArrayKit::setTrianglesShaderProgram(std::shared_ptr<ShaderProgram> program) {
-    triangles.program = program;
+    d2.program = program;
 }
 
-void GL::VertexArrayKit::setEnabled(bool points, bool lines, bool triangles) {
-    this->points.enabled = points;
-    this->lines.enabled = lines;
-    this->triangles.enabled = triangles;
+void GL::VertexArrayKit::setEnabled(bool d0, bool d1, bool d2) {
+    this->d0.enabled = d0;
+    this->d1.enabled = d1;
+    this->d2.enabled = d2;
 }

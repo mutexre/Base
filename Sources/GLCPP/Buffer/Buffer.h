@@ -21,6 +21,18 @@ namespace GL
             ReadWrite = GL_READ_WRITE
         };
 
+        enum class Usage : GLenum {
+            StreamDraw = GL_STREAM_DRAW,
+            StreamRead = GL_STREAM_READ,
+            StreamCopy = GL_STREAM_COPY,
+            StaticDraw = GL_STATIC_DRAW,
+            StaticRead = GL_STATIC_READ,
+            StaticCopy = GL_STATIC_COPY,
+            DynamicDraw = GL_DYNAMIC_DRAW,
+            DynamicRead = GL_DYNAMIC_READ,
+            DynamicCopy = GL_DYNAMIC_COPY
+        };
+
     public:
         Buffer();
         virtual ~Buffer() {}
@@ -42,7 +54,7 @@ namespace GL
 
         static GLint getCurrentBinding(Target);
 
-        static void data(Target, GLsizeiptr size, const GLvoid* data, GLenum usage);
+        static void data(Target, GLsizeiptr size, const GLvoid* data, Usage usage);
         static void subData(Target, GLintptr offset, GLsizeiptr size, const GLvoid* data);
         static void copySubData(Target readTarget, Target writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
 

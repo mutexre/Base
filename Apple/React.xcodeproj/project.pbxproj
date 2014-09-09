@@ -18,6 +18,8 @@
 		925D64DC18DC8B4E00A11BA9 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		9261EB5618DB73E2000DF5C3 /* Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Add.h; sourceTree = "<group>"; };
 		926AE68D18DC98D900FDD783 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		926D4138198D647700F4386D /* MakePair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakePair.h; sourceTree = "<group>"; };
+		926D4139198D689300F4386D /* GetStdVectorDataPtr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetStdVectorDataPtr.h; sourceTree = "<group>"; };
 		927340F7187C47290019AD73 /* React.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = React.h; path = React/React.h; sourceTree = "<group>"; };
 		927340FA187C47290019AD73 /* DampedOscillator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DampedOscillator.h; sourceTree = "<group>"; };
 		927340FB187C47290019AD73 /* InverseMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InverseMatrix.h; sourceTree = "<group>"; };
@@ -33,6 +35,7 @@
 		92734106187C47290019AD73 /* Scalar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Scalar.cpp; path = React/Scalar.cpp; sourceTree = "<group>"; };
 		92734107187C47290019AD73 /* Scalar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Scalar.h; path = React/Scalar.h; sourceTree = "<group>"; };
 		9273410C187C47430019AD73 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A322E2194B960F0010AA3F /* Forward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Forward.h; sourceTree = "<group>"; };
 		92ED97E618D89CDA00E69636 /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Observable.h; path = React/Observable.h; sourceTree = "<group>"; };
 		92ED97E718D89F2400E69636 /* Provider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Provider.h; path = React/Provider.h; sourceTree = "<group>"; };
 		92ED97E918D89FBB00E69636 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = React/Matrix.h; sourceTree = "<group>"; };
@@ -101,6 +104,9 @@
 				92734105187C47290019AD73 /* Transpose.h */,
 				925D64DC18DC8B4E00A11BA9 /* Box.h */,
 				92167A2D18E21162005CC32A /* RangeInfo.h */,
+				92A322E2194B960F0010AA3F /* Forward.h */,
+				926D4138198D647700F4386D /* MakePair.h */,
+				926D4139198D689300F4386D /* GetStdVectorDataPtr.h */,
 			);
 			name = Transform;
 			path = React/Transform;

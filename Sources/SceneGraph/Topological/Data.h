@@ -30,21 +30,21 @@ namespace SG
             std::shared_ptr<Math::Geometry::Topology<D, I>> topology;
 
             struct DataSize {
-                Rt::u4 coords, normals, colors, points, edges, triangles, whole;
+                Rt::u4 coords, normals, colors, d0, d1, d2, whole;
             }
             dataSize;
 
             struct {
-                Rt::u4 coords, normals, colors, points, edges, triangles;
+                Rt::u4 coords, normals, colors, d0, d1, d2;
             }
             dataOffset;
 
             struct {
                 std::vector<Math::Vector<float>> coords, normals;
                 std::vector<Color::RGBA<float>> colors;
-                std::vector<I> points;
-                std::vector<Math::Geometry::Edge<I>> edges;
-                std::vector<Math::Geometry::Triangle<I>> triangles;
+                std::vector<I> d0;
+                std::vector<Math::Geometry::Edge<I>> d1;
+                std::vector<Math::Geometry::Triangle<I>> d2;
             }
             data;
 
@@ -60,9 +60,8 @@ namespace SG
             }
 
             void initVerticesQuads() {
-                if (isNumberOfQuadsPerVertexUniform) {
+                if (isNumberOfQuadsPerVertexUniform)
                     numberOfQuadsPerVertex = topology->getCount(0, 0, 2);
-                }
                 else
                     for (I vertex = 0; vertex < numberOfVertices; vertex++)
                         quadsPerVertex.push_back(topology->getCount(vertex, 0, 2));
@@ -96,18 +95,18 @@ namespace SG
                 dataSize.coords = totalNumberOfVertices * sizeof(Math::Vector<float>);
                 dataSize.normals = dataSize.coords;
                 dataSize.colors = totalNumberOfVertices * sizeof(Color::RGBA<float>);
-                dataSize.points = numberOfVertices * sizeof(I);
-                dataSize.edges = numberOfEdges * sizeof(Math::Geometry::Edge<I>);
-                dataSize.triangles = GL::trianglesPerQuad * numberOfQuads * sizeof(Math::Geometry::Triangle<I>);
+                dataSize.d0 = numberOfVertices * sizeof(I);
+                dataSize.d1 = numberOfEdges * sizeof(Math::Geometry::Edge<I>);
+                dataSize.d2 = GL::trianglesPerQuad * numberOfQuads * sizeof(Math::Geometry::Triangle<I>);
             }
 
             void calcDataOffsets() {
                 dataOffset.coords = 0;
                 dataOffset.normals = dataOffset.coords + dataSize.coords;
                 dataOffset.colors = dataOffset.normals + dataSize.normals;
-                dataOffset.points = dataOffset.colors + dataSize.colors;
-                dataOffset.edges = dataOffset.points + dataSize.points;
-                dataOffset.triangles = dataOffset.edges + dataSize.edges;
+                dataOffset.d0 = dataOffset.colors + dataSize.colors;
+                dataOffset.d1 = dataOffset.d0 + dataSize.d0;
+                dataOffset.d2 = dataOffset.d1 + dataSize.d1;
             }
 
             I getVertexOffset(I vertex) {
@@ -139,7 +138,7 @@ namespace SG
                 calcDataSizes();
                 calcDataOffsets();
 
-                dataSize.whole = dataOffset.triangles + dataSize.triangles;
+                dataSize.whole = dataOffset.d2 + dataSize.d2;
 
                 data.coords.resize(totalNumberOfVertices);
                 data.colors.resize(totalNumberOfVertices);
@@ -161,9 +160,9 @@ namespace SG
                                    coordComponentsCount * sizeof(float));
                 }
 
-                data.points.resize(numberOfVertices);
+                data.d0.resize(numberOfVertices);
                 for (I i = 0; i < numberOfVertices; i++)
-                    data.points[i] = getVertexOffset(i);
+                    data.d0[i] = getVertexOffset(i);
 
                 if (dim == 1)
                     for (I i = 0; i < totalNumberOfVertices; i++)
@@ -175,18 +174,18 @@ namespace SG
 
                 if (dim >= 1)
                 {
-                    data.edges.resize(numberOfEdges);
+                    data.d1.resize(numberOfEdges);
                     for (I i = 0; i < numberOfEdges; i++)
                     {
                         auto vertices = topology->getElements(i, 1, 0);
-                        data.edges[i].a = getVertexOffset(vertices[0]);
-                        data.edges[i].b = getVertexOffset(vertices[1]);
+                        data.d1[i].a = getVertexOffset(vertices[0]);
+                        data.d1[i].b = getVertexOffset(vertices[1]);
                     }
 
                     if (dim >= 2)
                     {
                         data.normals.resize(totalNumberOfVertices);
-                        data.triangles.resize(numberOfQuads * GL::trianglesPerQuad);
+                        data.d2.resize(numberOfQuads * GL::trianglesPerQuad);
 
                         std::vector<I> counters(numberOfVertices);
                         std::fill_n(counters.begin(), numberOfVertices, 0);
@@ -203,14 +202,14 @@ namespace SG
                                 getVertexOffset(vertices[3]) + counters[vertices[3]]
                             };
 
-                            data.triangles[triangleIndex].a = actualVertexIndices[0];
-                            data.triangles[triangleIndex].b = actualVertexIndices[1];
-                            data.triangles[triangleIndex].c = actualVertexIndices[2];
+                            data.d2[triangleIndex].a = actualVertexIndices[0];
+                            data.d2[triangleIndex].b = actualVertexIndices[1];
+                            data.d2[triangleIndex].c = actualVertexIndices[2];
                             triangleIndex++;
 
-                            data.triangles[triangleIndex].a = actualVertexIndices[2];
-                            data.triangles[triangleIndex].b = actualVertexIndices[1];
-                            data.triangles[triangleIndex].c = actualVertexIndices[3];
+                            data.d2[triangleIndex].a = actualVertexIndices[2];
+                            data.d2[triangleIndex].b = actualVertexIndices[1];
+                            data.d2[triangleIndex].c = actualVertexIndices[3];
                             triangleIndex++;
 
                             Math::Vector<float> v01 = data.coords[actualVertexIndices[1]] - data.coords[actualVertexIndices[0]];
@@ -246,9 +245,9 @@ namespace SG
                 memcpy(((Rt::u1*)ptr) + dataOffset.coords, data.coords.data(), dataSize.coords);
                 if (dim >= 1) {
                     if (dim >= 2) memcpy(((Rt::u1*)ptr) + dataOffset.normals, data.normals.data(), dataSize.normals);
-                    memcpy(((Rt::u1*)ptr) + dataOffset.points, data.points.data(), dataSize.points);
-                    memcpy(((Rt::u1*)ptr) + dataOffset.edges, data.edges.data(), dataSize.edges);
-                    if (dim >= 2) memcpy(((Rt::u1*)ptr) + dataOffset.triangles, data.triangles.data(), dataSize.triangles);
+                    memcpy(((Rt::u1*)ptr) + dataOffset.d0, data.d0.data(), dataSize.d0);
+                    memcpy(((Rt::u1*)ptr) + dataOffset.d1, data.d1.data(), dataSize.d1);
+                    if (dim >= 2) memcpy(((Rt::u1*)ptr) + dataOffset.d2, data.d2.data(), dataSize.d2);
                 }
 
                 #if 0
@@ -264,7 +263,7 @@ namespace SG
                     printf("%f %f %f\n", fPtr[0], fPtr[1], fPtr[2]);
                 }
 
-                printf("edges:");
+                printf("d1:");
                 for (int i = 0; i < numberOfEdges; i++) {
                     auto iptr = ((I*)((Rt::u1*)ptr + dataSize.coords + dataSize.normals + dataSize.colors)) + i * 2;
                     printf("%u %u\n", iptr[0], iptr[1]);
@@ -315,15 +314,15 @@ namespace SG
             }
 
             Rt::u4 getPointsOffset() const {
-                return dataOffset.points;
+                return dataOffset.d0;
             }
 
             Rt::u4 getEdgesOffset() const {
-                return dataOffset.edges;
+                return dataOffset.d1;
             }
 
             Rt::u4 getTrianglesOffset() const {
-                return dataOffset.triangles;
+                return dataOffset.d2;
             }
 
             void transformCoord(const float* input, float* output, const Rotations& rotations) {
@@ -441,10 +440,10 @@ namespace SG
             {
                 printf("Model:\n");
                 printf("  vertices: %u\n", numberOfVertices);
-                printf("  edges: %u\n", numberOfEdges);
-                printf("  triangles: %u\n", 2 * numberOfQuads);
+                printf("  d1: %u\n", numberOfEdges);
+                printf("  d2: %u\n", 2 * numberOfQuads);
 
-                printf("  edges per vertex: ");
+                printf("  d1 per vertex: ");
                 if (isNumberOfEdgesPerVertexUniform) printf("%u\n", numberOfEdgesPerVertex);
                 else printf("varies\n");
 

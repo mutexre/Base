@@ -12,9 +12,10 @@ namespace Math
             virtual ~Topology() {}
 
             virtual I getCount(D) = 0;
-            virtual I getCount(I, D, D) = 0;
-            virtual bool isElementsCountUniform(D, D elementDim) = 0;
-            virtual std::vector<I> getElements(I, D, D) = 0;
+            virtual I getCount(I id, D idDim, D) = 0;
+            virtual I getCount(D, D elementDim) = 0; // returned value is undefined in case elements count is non-uniform
+            virtual bool isElementsCountUniform(D, D) = 0;
+            virtual std::vector<I> getElements(I id, D idDim, D) = 0;
         };
     }
 }

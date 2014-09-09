@@ -61,13 +61,13 @@ namespace GL
         };
 
     public:
-        Options points, lines, triangles;
+        Options d0, d1, d2;
 
     public:
         VertexArrayKit();
-        VertexArrayKit(Options points,
-                       Options lines,
-                       Options triangles);
+        VertexArrayKit(Options d0,
+                       Options d1,
+                       Options d2);
 
         virtual ~VertexArrayKit() {}
 
@@ -85,7 +85,7 @@ namespace GL
         virtual void setTrianglesOptions(Options options);
         virtual void setTrianglesShaderProgram(std::shared_ptr<ShaderProgram> program);
 
-        virtual void setEnabled(bool points, bool lines, bool triangles);
+        virtual void setEnabled(bool d0, bool d1, bool d2);
     };
 }
 

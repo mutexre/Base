@@ -18,7 +18,7 @@ template <typename T, typename I> int Rt::Type::Test<T, I>::test()
 
     auto text =
         "<struct name=\"data\">\
-            <matrix dim=\"100\" name=\"points\" round=\"33\">\
+            <matrix dim=\"100\" name=\"d0\" round=\"33\">\
                 <struct name=\"vertex\">\
                     <struct name=\"coord\">\
                         <atom size=\"4\" name=\"x\"/>\
@@ -34,7 +34,7 @@ template <typename T, typename I> int Rt::Type::Test<T, I>::test()
                 </struct>\
             </matrix>\
             \
-            <struct name=\"lines\">\
+            <struct name=\"d1\">\
                 <matrix dim=\"200\" name=\"vertices\">\
                     <struct name=\"vertex\">\
                         <struct name=\"coord\">\
@@ -51,7 +51,7 @@ template <typename T, typename I> int Rt::Type::Test<T, I>::test()
                     </struct>\
                 </matrix>\
                 \
-                <matrix dim=\"300\" name=\"edges\">\
+                <matrix dim=\"300\" name=\"d1\">\
                     <struct name=\"edge\">\
                         <atom size=\"4\" name=\"v0\"/>\
                         <atom size=\"4\" name=\"v1\"/>\
@@ -59,7 +59,7 @@ template <typename T, typename I> int Rt::Type::Test<T, I>::test()
                 </matrix>\
             </struct>\
             \
-            <struct name=\"triangles\">\
+            <struct name=\"d2\">\
                 <matrix dim=\"260\" name=\"vertices\">\
                     <struct name=\"vertex\">\
                         <struct name=\"coord\">\
@@ -76,7 +76,7 @@ template <typename T, typename I> int Rt::Type::Test<T, I>::test()
                     </struct>\
                 </matrix>\
                 \
-                <matrix dim=\"370\" name=\"triangles\">\
+                <matrix dim=\"370\" name=\"d2\">\
                     <struct name=\"triangle\">\
                         <atom size=\"4\" name=\"v0\"/>\
                         <atom size=\"4\" name=\"v1\"/>\
@@ -100,26 +100,26 @@ template <typename T, typename I> int Rt::Type::Test<T, I>::test()
     auto type = loader.parse(doc);
     printf("%s\n", type->toString().c_str());
 
-    auto element = type->at("lines")->at("vertices")->at("vertex")->at("color");
+    auto element = type->at("d1")->at("vertices")->at("vertex")->at("color");
     printf("%s\n", element->toString().c_str());
 
     auto so = element->getStrideAndOffset();
     if (so.defined) printf("stride and offset %u %u\n", so.value.first, so.value.second);
 
-    element = type->at("points");
+    element = type->at("d0");
     printf("%u\n", element->getRoundedSize());
 
-    element = type->at("lines");
+    element = type->at("d1");
     printf("%u\n", element->getRoundedSize());
 
-    element = type->at("triangles");
+    element = type->at("d2");
     printf("%u\n", element->getRoundedSize());
 
     delete type;
     delete doc;
 
     auto text2 =
-        "<matrix dim=\"100\" name=\"points\">\
+        "<matrix dim=\"100\" name=\"d0\">\
             <struct name=\"vertex\">\
                 <struct name=\"coord\">\
                     <atom size=\"4\" name=\"x\"/>\
@@ -201,26 +201,26 @@ template <typename T, typename I> int Rt::Type::Test<T, I>::test()
                 </struct>\
             </typedef>\
             \
-            <struct name=\"points\">\
+            <struct name=\"d0\">\
                 <matrix name=\"vertices\">\
                     <vertex name=\"vertex\"/>\
                 </matrix>\
             </struct>\
             \
-            <struct name=\"lines\">\
+            <struct name=\"d1\">\
                 <matrix name=\"vertices\">\
                     <vertex name=\"vertex\"/>\
                 </matrix>\
-                <matrix name=\"edges\">\
+                <matrix name=\"d1\">\
                     <edge name=\"edge\"/>\
                 </matrix>\
             </struct>\
             \
-            <struct name=\"triangles\">\
+            <struct name=\"d2\">\
                 <matrix name=\"vertices\">\
                     <vertex name=\"vertex\"/>\
                 </matrix>\
-                <matrix name=\"triangles\">\
+                <matrix name=\"d2\">\
                     <triangle name=\"triangle\"/>\
                 </matrix>\
             </struct>\

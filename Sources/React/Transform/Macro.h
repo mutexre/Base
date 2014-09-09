@@ -1,6 +1,8 @@
 #ifndef header_58E27E4DB3E4
 #define header_58E27E4DB3E4
 
+/******** INPUT **********/
+
 #define REACT_DEFINE_GETTER(type, var, name)\
     const type& name() const {\
         return var;\
@@ -26,6 +28,8 @@ public:\
     REACT_DEFINE_GETTER(type, var, getter)\
     REACT_DEFINE_INPUT_SETTER(type, var, setter, invalidator)
 
+/******** OUTPUT **********/
+
 #define REACT_DEFINE_OUTPUT_SETTER(type, var, name, evalFunc)\
     void name(type value) {\
         auto previousVar = this->var;\
@@ -44,6 +48,8 @@ protected:\
 public:\
     REACT_DEFINE_GETTER(type, var, getter)\
     REACT_DEFINE_OUTPUT_SETTER(type, var, setter, evalFunc)
+
+/******** VECTOR INPUT **********/
 
 #define REACT_DEFINE_VECTOR_GETTER(type, var, name)\
     const type& name(Rt::u2 index) const {\
@@ -79,6 +85,8 @@ public:\
     REACT_DEFINE_INPUT_VECTOR_SETTER(type, var, setter, callback)\
     REACT_DEFINE_INPUT_VECTOR_ADDER(type, var, adder, callback)
 
+/******** VECTOR OUTPUT **********/
+
 #define REACT_DEFINE_OUTPUT_VECTOR_SETTER(type, var, name, evalFunc)\
     void name(Rt::u2 index, type value) {\
         auto previousVar = this->var[index];\
@@ -104,7 +112,7 @@ protected:\
     std::vector<type> var;\
 public:\
     REACT_DEFINE_VECTOR_GETTER(type, var, getter)\
-    REACT_DEFINE_OUTPUT_VECTOR_SETTER(type, var, setter)\
-    REACT_DEFINE_OUTPUT_VECTOR_ADDER(type, var, adder)
+    REACT_DEFINE_OUTPUT_VECTOR_SETTER(type, var, setter, evalFunc)\
+    REACT_DEFINE_OUTPUT_VECTOR_ADDER(type, var, adder, evalFunc)
 
 #endif

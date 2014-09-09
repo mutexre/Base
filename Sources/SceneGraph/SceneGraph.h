@@ -14,18 +14,22 @@ namespace SG
     class Buffer;
     class Data;
     class DataBinding;
+    class BindData;
     class DrawCall;
+    class Piece;
     class Material;
+    class UniformBlockBinding;
     class Segment;
     class Object;
     template <typename T> class Order;
     template <typename T> class Group;
     class Light;
-    class Frame;
+    class View;
 
-    using Objects = Group<std::shared_ptr<Object>>;
-    using Lights = Group<std::shared_ptr<Light>>;
-    using ObjectsOrder = Order<std::shared_ptr<Object>>;
+    using ObjectPtr = React::ScalarPtr<std::shared_ptr<Object>>;
+    using Objects = Group<ObjectPtr>;
+    using Lights = Group<React::ScalarPtr<std::shared_ptr<Light>>>;
+    using ObjectsOrder = Order<ObjectPtr>;
 }
 
 //#include <SceneGraph/Scene.h>
@@ -46,7 +50,15 @@ namespace SG
 #include <SceneGraph/View.h>
 #include <SceneGraph/StandardTransforms.h>
 #include <SceneGraph/Implementation.h>
+#include <SceneGraph/AttributeArray.h>
+#include <SceneGraph/PrimitivesStream.h>
+#include <SceneGraph/AttributesMapping.h>
+#include <SceneGraph/AttributesExpander.h>
 #include <SceneGraph/Topological/Data.h>
+#include <SceneGraph/Topological/DefaultPrimitivesExtractor.h>
+#include <SceneGraph/Topological/ConvexTriangulation.h>
+#include <SceneGraph/Topological/Cpu2GpuProjection.h>
 #include <SceneGraph/Topological/Object.h>
+#include <SceneGraph/Topological/GatherSegments.h>
 
 #endif

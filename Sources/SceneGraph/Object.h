@@ -39,6 +39,9 @@ namespace SG
             return segments;
         }
 
+        void setSegments(const Segments& segments) {
+            this->segments = segments;
+        }
 /*
         std::shared_ptr<Program> getProgram() const {
             return program;

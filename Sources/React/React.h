@@ -27,5 +27,8 @@
 #include <React/Transform/MathVector/GetX.h>
 #include <React/Transform/MathVector/GetY.h>
 #include <React/Transform/MathVector/GetZ.h>
+#include <React/Transform/Forward.h>
+#include <React/Transform/MakePair.h>
+#include <React/Transform/GetStdVectorDataPtr.h>
 
 #endif

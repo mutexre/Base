@@ -35,6 +35,11 @@ namespace React
             output->commit(false);
         }
 
+        template <typename T>
+        bool isChanged(T& input) {
+            return !input->isValid();
+        }
+
     public:
         Transform() {}
 

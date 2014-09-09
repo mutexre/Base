@@ -12,8 +12,8 @@ namespace GL
                 struct Data
                 {
                     static const GLfloat vertices[8][3];
-                    static const GLuint edges[12][verticesPerEdge];
-                    static const GLuint triangles[6 * trianglesPerQuad][verticesPerTriangle];
+                    static const GLuint d1[12][verticesPerEdge];
+                    static const GLuint d2[6 * trianglesPerQuad][verticesPerTriangle];
                 };
             };
         }

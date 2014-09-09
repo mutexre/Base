@@ -16,9 +16,9 @@ namespace SG
             notify(this);
         }
 
-        std::list<std::shared_ptr<Object>>
+        std::list<ObjectPtr>
         sort(const std::set<T>& objects) const {
-            std::list<std::shared_ptr<Object>> orderedObjects;
+            std::list<ObjectPtr> orderedObjects;
             for (auto& child : children) {
                 if (child.state.defined) {
                     if (child.state.get() == 0) {

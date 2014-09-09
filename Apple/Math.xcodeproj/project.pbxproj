@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923A3BCD194C390D00CBD7A4 /* Topology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923A3BCB194C390D00CBD7A4 /* Topology.cpp */; };
+		923A3BCE194C390D00CBD7A4 /* Topology.h in Headers */ = {isa = PBXBuildFile; fileRef = 923A3BCC194C390D00CBD7A4 /* Topology.h */; };
+		923A3BD1194C412C00CBD7A4 /* Topology.h in Headers */ = {isa = PBXBuildFile; fileRef = 923A3BD0194C412C00CBD7A4 /* Topology.h */; };
+		923B33B8194F8885008C693C /* Topology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923B33B7194F8885008C693C /* Topology.cpp */; };
 		923C5F1217CFE50D00C7FAAA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 923C5F0417CFE4F500C7FAAA /* main.cpp */; };
 		923C5F1317CFE51500C7FAAA /* libMath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9270C98B17C0258E00EFA781 /* libMath.a */; };
 		924BEB8017D7856A003F2972 /* Rational.h in Headers */ = {isa = PBXBuildFile; fileRef = 924BEB7F17D7856A003F2972 /* Rational.h */; };
-		928F4629186E7E6F00863293 /* Hypercube.h in Headers */ = {isa = PBXBuildFile; fileRef = 928F4627186E7E6F00863293 /* Hypercube.h */; };
-		928F462A186E7E6F00863293 /* Hypercube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 928F4628186E7E6F00863293 /* Hypercube.cpp */; };
 		92D06B5E1800B44100DB9A66 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D06B5B1800B44000DB9A66 /* Matrix.h */; };
 		92D06B5F1800B44100DB9A66 /* MatrixDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D06B5C1800B44000DB9A66 /* MatrixDefinition.h */; };
 		92D06B691800B45600DB9A66 /* SquareMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D06B601800B45300DB9A66 /* SquareMatrix.h */; };
@@ -52,6 +54,13 @@
 		922C7C1418C5F76B0092A7E4 /* TranslationDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslationDefinition.h; sourceTree = "<group>"; };
 		922C7C1518C5F7BA0092A7E4 /* OrthogonalProjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrthogonalProjection.h; sourceTree = "<group>"; };
 		922C7C1618C5F82C0092A7E4 /* OrthogonalProjectionDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrthogonalProjectionDefinition.h; sourceTree = "<group>"; };
+		923A3BCA194C38AB00CBD7A4 /* Coords.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Coords.h; path = Hypercube/Coords.h; sourceTree = "<group>"; };
+		923A3BCB194C390D00CBD7A4 /* Topology.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Topology.cpp; path = Hypercube/Topology.cpp; sourceTree = "<group>"; };
+		923A3BCC194C390D00CBD7A4 /* Topology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Topology.h; path = Hypercube/Topology.h; sourceTree = "<group>"; };
+		923A3BD0194C412C00CBD7A4 /* Topology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Topology.h; path = Hypercube/Triangulated/Topology.h; sourceTree = "<group>"; };
+		923A3BD2194C414900CBD7A4 /* SourceElementsProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SourceElementsProvider.h; path = Hypercube/Triangulated/SourceElementsProvider.h; sourceTree = "<group>"; };
+		923B33B7194F8885008C693C /* Topology.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Topology.cpp; path = Hypercube/Triangulated/Topology.cpp; sourceTree = "<group>"; };
+		923B33B91950E1D0008C693C /* TriangleMesh3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangleMesh3D.h; sourceTree = "<group>"; };
 		923C5F0417CFE4F500C7FAAA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../Sources/Math/Test/main.cpp; sourceTree = "<group>"; };
 		923C5F0917CFE50100C7FAAA /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		924BEB7E17D74D84003F2972 /* Ring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ring.h; sourceTree = "<group>"; };
@@ -88,7 +97,7 @@
 		9270C98517C0251100EFA781 /* VertexTransformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexTransformation.h; sourceTree = "<group>"; };
 		9270C98617C0251100EFA781 /* VertexTransformationDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexTransformationDefinition.h; sourceTree = "<group>"; };
 		9270C98B17C0258E00EFA781 /* libMath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMath.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9270C99A17C0BB0500EFA781 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		9270C99A17C0BB0500EFA781 /* MixedCoordinates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixedCoordinates.h; sourceTree = "<group>"; };
 		9270C99B17C0BB0500EFA781 /* Topology.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Topology.h; sourceTree = "<group>"; };
 		9270C9A317C0BB1400EFA781 /* Topology.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Topology.h; sourceTree = "<group>"; };
 		9270C9A417C0BB1400EFA781 /* TopologyDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopologyDefinition.h; sourceTree = "<group>"; };
@@ -97,8 +106,6 @@
 		9270C9A717C0BC4400EFA781 /* Vertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vertex.h; path = ../Sources/Math/Vertex.h; sourceTree = "<group>"; };
 		9270C9A817C0BC4500EFA781 /* VertexDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VertexDefinition.h; path = ../Sources/Math/VertexDefinition.h; sourceTree = "<group>"; };
 		9270C9A917C0CEC800EFA781 /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Plane.h; path = ../Sources/Math/Plane.h; sourceTree = "<group>"; };
-		928F4627186E7E6F00863293 /* Hypercube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hypercube.h; sourceTree = "<group>"; };
-		928F4628186E7E6F00863293 /* Hypercube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hypercube.cpp; sourceTree = "<group>"; };
 		92D06B5A1800B44000DB9A66 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
 		92D06B5B1800B44000DB9A66 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		92D06B5C1800B44000DB9A66 /* MatrixDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixDefinition.h; sourceTree = "<group>"; };
@@ -115,6 +122,7 @@
 		92D4668617E5F8A4002989F9 /* Unbounded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unbounded.h; sourceTree = "<group>"; };
 		92D6C9A517CF5A4400FAA6A9 /* PerspectiveProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerspectiveProjection.h; sourceTree = "<group>"; };
 		92D6C9A617CF5A4400FAA6A9 /* PerspectiveProjectionDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerspectiveProjectionDefinition.h; sourceTree = "<group>"; };
+		92F45C6B194C2D20005CD739 /* SourceElementsProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceElementsProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,27 @@
 				922C7C0B18C5F76B0092A7E4 /* TSPDefinition.h */,
 			);
 			path = Combinations;
+			sourceTree = "<group>";
+		};
+		923A3BC8194C383A00CBD7A4 /* Hypercube */ = {
+			isa = PBXGroup;
+			children = (
+				923A3BCF194C410C00CBD7A4 /* Triangulated */,
+				923A3BCC194C390D00CBD7A4 /* Topology.h */,
+				923A3BCB194C390D00CBD7A4 /* Topology.cpp */,
+				923A3BCA194C38AB00CBD7A4 /* Coords.h */,
+			);
+			name = Hypercube;
+			sourceTree = "<group>";
+		};
+		923A3BCF194C410C00CBD7A4 /* Triangulated */ = {
+			isa = PBXGroup;
+			children = (
+				923A3BD0194C412C00CBD7A4 /* Topology.h */,
+				923B33B7194F8885008C693C /* Topology.cpp */,
+				923A3BD2194C414900CBD7A4 /* SourceElementsProvider.h */,
+			);
+			name = Triangulated;
 			sourceTree = "<group>";
 		};
 		923C5F0317CFE4D300C7FAAA /* Test */ = {
@@ -340,13 +369,14 @@
 		9270C99517C0BB0300EFA781 /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
-				9270C99A17C0BB0500EFA781 /* Model.h */,
+				923A3BC8194C383A00CBD7A4 /* Hypercube */,
 				9270C99B17C0BB0500EFA781 /* Topology.h */,
 				9229C7C817D11F7A00A1BF94 /* Primitives.h */,
-				928F4627186E7E6F00863293 /* Hypercube.h */,
-				928F4628186E7E6F00863293 /* Hypercube.cpp */,
 				924BEB7E17D74D84003F2972 /* Ring.h */,
 				924BEB8217D8621B003F2972 /* PolarRose.h */,
+				9270C99A17C0BB0500EFA781 /* MixedCoordinates.h */,
+				92F45C6B194C2D20005CD739 /* SourceElementsProvider.h */,
+				923B33B91950E1D0008C693C /* TriangleMesh3D.h */,
 			);
 			name = Geometry;
 			path = ../Sources/Math/Geometry;
@@ -390,12 +420,13 @@
 				924BEB8017D7856A003F2972 /* Rational.h in Headers */,
 				92D06B5E1800B44100DB9A66 /* Matrix.h in Headers */,
 				92D06B5F1800B44100DB9A66 /* MatrixDefinition.h in Headers */,
+				923A3BD1194C412C00CBD7A4 /* Topology.h in Headers */,
+				923A3BCE194C390D00CBD7A4 /* Topology.h in Headers */,
 				92D06B691800B45600DB9A66 /* SquareMatrix.h in Headers */,
 				92D06B6B1800B45600DB9A66 /* SquareMatrix2.h in Headers */,
 				92D06B6D1800B45600DB9A66 /* SquareMatrix3.h in Headers */,
 				92D06B6F1800B45600DB9A66 /* SquareMatrix4.h in Headers */,
 				92D06B711800B45600DB9A66 /* SquareMatrixDefinition.h in Headers */,
-				928F4629186E7E6F00863293 /* Hypercube.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +506,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				928F462A186E7E6F00863293 /* Hypercube.cpp in Sources */,
+				923B33B8194F8885008C693C /* Topology.cpp in Sources */,
+				923A3BCD194C390D00CBD7A4 /* Topology.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,15 +6,15 @@ namespace SG
     class View : public std::enable_shared_from_this<View>
     {
     private:
-        std::list<std::shared_ptr<Object>> orderedObjects;
+        std::list<ObjectPtr> orderedObjects;
         std::shared_ptr<ObjectsOrder> order;
         std::shared_ptr<Objects> objects;
         std::shared_ptr<Lights> lights;
         GL::Viewport viewport;
 
         struct Visibility {
-            using _Object = std::map<std::shared_ptr<Object>, React::ScalarPtr<bool>>;
-            using _Segment = std::map<std::pair<std::shared_ptr<Object>, std::shared_ptr<Segment>>, React::ScalarPtr<bool>>;
+            using _Object = std::map<ObjectPtr, React::ScalarPtr<bool>>;
+            using _Segment = std::map<std::pair<ObjectPtr, std::shared_ptr<Segment>>, React::ScalarPtr<bool>>;
 
             _Object object;
             _Segment segment;
@@ -24,8 +24,8 @@ namespace SG
         struct {
             using Bindings = std::map<std::string, React::MatrixPtr<>>;
             Bindings global;
-            std::map<std::shared_ptr<Object>, Bindings> perObject;
-            std::map<std::shared_ptr<Object>, std::map<std::shared_ptr<Segment>, Bindings>> perObjectAndSegment;
+            std::map<ObjectPtr, Bindings> perObject;
+            std::map<ObjectPtr, std::map<std::shared_ptr<Segment>, Bindings>> perObjectAndSegment;
         }
         bindings;
 
@@ -93,11 +93,11 @@ namespace SG
             if (iter != bindings.global.end()) bindings.global.erase(iter);
         }
 
-        void bind(std::shared_ptr<Object> object, const std::string& variable, React::MatrixPtr<> bindingPoint) {
+        void bind(const ObjectPtr& object, const std::string& variable, React::MatrixPtr<> bindingPoint) {
             bindings.perObject[object][variable] = bindingPoint;
         }
 
-        void unbind(std::shared_ptr<Object> object, const std::string& variable) {
+        void unbind(const ObjectPtr& object, const std::string& variable) {
             auto objectBindingsIter = bindings.perObject.find(object);
             if (objectBindingsIter != bindings.perObject.end()) {
                 auto& objectBindings = (*objectBindingsIter).second;
@@ -107,13 +107,13 @@ namespace SG
             }
         }
 
-        void bind(std::shared_ptr<Object> object, std::shared_ptr<Segment> segment,
+        void bind(const ObjectPtr& object, std::shared_ptr<Segment> segment,
                   const std::string& variable, React::MatrixPtr<> bindingPoint)
         {
             bindings.perObject[object][variable] = bindingPoint;
         }
 
-        void unbind(std::shared_ptr<Object> object, std::shared_ptr<Segment> segment, const std::string& variable)
+        void unbind(const ObjectPtr& object, std::shared_ptr<Segment> segment, const std::string& variable)
         {
             auto objectBindingsIter = bindings.perObject.find(object);
             if (objectBindingsIter != bindings.perObject.end()) {
@@ -124,13 +124,12 @@ namespace SG
             }
         }
 
-        void setVisibility(std::shared_ptr<SG::Object> object,
-                           React::ScalarPtr<bool> value)
+        void setVisibility(const ObjectPtr& object, React::ScalarPtr<bool> value)
         {
             visibility.object[object] = value;
         }
 
-        void setVisibility(std::shared_ptr<SG::Object> object,
+        void setVisibility(const ObjectPtr& object,
                            std::shared_ptr<SG::Segment> segment,
                            React::ScalarPtr<bool> value)
         {
@@ -150,7 +149,7 @@ namespace SG
                     objectVisible = iter->second->get();
 
                 if (objectVisible)
-                    for (auto& segment : object->getSegments()) {
+                    for (auto& segment : object->value()->getSegments()) {
                         bool segmentVisible = true;
 
                         auto iter = visibility.segment.find(std::make_pair(object, segment));

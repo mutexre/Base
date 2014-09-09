@@ -62,6 +62,15 @@ namespace SG
             pieces.push_back(p);
         }
 
+        Segment(React::ScalarPtr<std::shared_ptr<DataBinding>> dataBinding,
+                React::ScalarPtr<std::shared_ptr<DrawCall>> drawCall,
+                bool enableDepthTest = true)
+        {
+            Piece p(dataBinding, drawCall);
+            pieces.push_back(p);
+            flags.enableDepthTest = enableDepthTest;
+        }
+
         virtual ~Segment() {}
 
         Pieces& getPieces() {

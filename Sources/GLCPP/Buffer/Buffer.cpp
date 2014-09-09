@@ -65,7 +65,7 @@ GL::Buffer::Buffer() {
     needToDelete = true;
 }
 
-void GL::Buffer::data(Target target, GLsizeiptr size, const GLvoid* data, GLenum usage) {
+void GL::Buffer::data(Target target, GLsizeiptr size, const GLvoid* data, Usage usage) {
     glBufferData(GLenum(target), size, data, usage);
 }
 
@@ -79,8 +79,8 @@ void GL::Buffer::copySubData(Target readTarget, Target writeTarget, GLintptr rea
 
 #if defined __APPLE__ && TARGET_OS_IPHONE
 
-GLvoid* GL::Buffer::map(Target target, GLenum access) {
-    return glMapBufferOES(target, access);
+GLvoid* GL::Buffer::map(Target target, Access access) {
+    return glMapBufferOES(target, GLenum(access));
 }
 
 void GL::Buffer::unmap(Target target) {

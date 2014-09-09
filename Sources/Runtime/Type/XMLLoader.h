@@ -228,7 +228,7 @@ namespace Rt
                 auto nodes = boost::get(&VertexProperties::node, *dependencies);
 
                 typename boost::graph_traits<Graph>::edge_iterator ei, edge_end;
-                for (boost::tie(ei, edge_end) = boost::edges(*dependencies); ei != edge_end; ++ei)
+                for (boost::tie(ei, edge_end) = boost::d1(*dependencies); ei != edge_end; ++ei)
                     printf("eee\n");
 
                 typename boost::graph_traits<Graph>::vertex_iterator vi, vertex_end;

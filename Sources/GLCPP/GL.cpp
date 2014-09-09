@@ -24,6 +24,8 @@ void GL::printState(){
 GLsizeiptr GL::getSizeOfType(GLint type)
 {
     switch (type) {
+        case GL_HALF_FLOAT: return sizeof(GLhalf);
+
         case GL_FLOAT: return sizeof(GLfloat);
         case GL_FLOAT_VEC2: return 2 * sizeof(GLfloat);
         case GL_FLOAT_VEC3: return 3 * sizeof(GLfloat);
@@ -37,6 +39,17 @@ GLsizeiptr GL::getSizeOfType(GLint type)
         case GL_FLOAT_MAT3x4: return 3 * 4 * sizeof(GLfloat);
         case GL_FLOAT_MAT4x2: return 4 * 2 * sizeof(GLfloat);
         case GL_FLOAT_MAT4x3: return 4 * 3 * sizeof(GLfloat);
+
+        case GL_BYTE: return sizeof(GLint);
+        case GL_UNSIGNED_BYTE: return sizeof(GLuint);
+
+        case GL_SHORT: return sizeof(GLshort);
+        case GL_UNSIGNED_SHORT: return sizeof(GLushort);
+
+        case GL_UNSIGNED_INT: return sizeof(GLuint);
+        case GL_UNSIGNED_INT_VEC2: return 2 * sizeof(GLuint);
+        case GL_UNSIGNED_INT_VEC3: return 3 * sizeof(GLuint);
+        case GL_UNSIGNED_INT_VEC4: return 4 * sizeof(GLuint);
 
         case GL_INT: return sizeof(GLint);
         case GL_INT_VEC2: return 2 * sizeof(GLint);
@@ -52,6 +65,11 @@ GLsizeiptr GL::getSizeOfType(GLint type)
         case GL_BOOL_VEC2: return 2 * sizeof(GLboolean);
         case GL_BOOL_VEC3: return 3 * sizeof(GLboolean);
         case GL_BOOL_VEC4: return 4 * sizeof(GLboolean);
+
+        case GL_DOUBLE: return sizeof(GLdouble);
+
+        case GL_INT_2_10_10_10_REV: return 4;
+        case GL_UNSIGNED_INT_2_10_10_10_REV: return 4;
     }
     Rt::error(0xE4675FA0);
 }

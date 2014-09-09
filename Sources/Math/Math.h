@@ -75,11 +75,17 @@ namespace Math
 #include <Math/Distribution/Transformation.h>
 
 #include <Math/Geometry/Topology.h>
-#include <Math/Geometry/Model.h>
+#include <Math/Geometry/SourceElementsProvider.h>
+#include <Math/Geometry/MixedCoordinates.h>
 #include <Math/Geometry/Primitives.h>
-#include <Math/Geometry/Hypercube.h>
 #include <Math/Geometry/Ring.h>
 #include <Math/Geometry/PolarRose.h>
+//#include <Math/Geometry/TriangleMesh3D.h>
+
+#include <Math/Geometry/Hypercube/Topology.h>
+#include <Math/Geometry/Hypercube/Coords.h>
+#include <Math/Geometry/Hypercube/Triangulated/Topology.h>
+#include <Math/Geometry/Hypercube/Triangulated/SourceElementsProvider.h>
 
 namespace Math {
     #include <Math/MathDefinition.h>
