@@ -18,3 +18,11 @@ const std::string& Rt::Object::getName() const {
 void Rt::Object::setName(const std::string& name) {
     this->name = name;
 }
+
+const std::string& Rt::Object::getDescription() const {
+    return description;
+}
+
+void Rt::Object::setDescription(const std::string& description) {
+    this->description = description;
+}

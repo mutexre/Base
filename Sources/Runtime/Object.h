@@ -10,14 +10,17 @@ namespace Rt
         static unsigned long long int deallocsCount;
 
     protected:
-        std::string name;
+        std::string name, description;
 
     public:
         Object();
         virtual ~Object();
 
         const std::string& getName() const;
-        void setName(const std::string& name);
+        void setName(const std::string&);
+
+        const std::string& getDescription() const;
+        void setDescription(const std::string&);
     };
 }
 
