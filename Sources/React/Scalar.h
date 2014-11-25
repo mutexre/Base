@@ -38,13 +38,9 @@ namespace React
 
         virtual ~Scalar() {};
 
-        virtual T& get() {
+        virtual T& value() {
             evaluateIfNeeded();
             return val;
-        }
-
-        virtual T& value() {
-            return get();
         }
 
         virtual T& currentValue() {

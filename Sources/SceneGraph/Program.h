@@ -111,7 +111,7 @@ namespace SG
                 value->get().print();
 #endif
 
-                if (setVariable(name, reinterpret_cast<Rt::u1*>(value->get().getData().data()))) {
+                if (setVariable(name, reinterpret_cast<Rt::u1*>(value->value().getData().data()))) {
                     if (stampIter != stamps.end())
                         (*stampIter).second.set(value);
                     else

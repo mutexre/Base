@@ -66,7 +66,7 @@ GL::Buffer::Buffer() {
 }
 
 void GL::Buffer::data(Target target, GLsizeiptr size, const GLvoid* data, Usage usage) {
-    glBufferData(GLenum(target), size, data, usage);
+    glBufferData(GLenum(target), size, data, GLenum(usage));
 }
 
 void GL::Buffer::subData(Target target, GLintptr offset, GLsizeiptr size, const GLvoid* data) {

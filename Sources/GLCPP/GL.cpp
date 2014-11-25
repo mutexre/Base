@@ -56,11 +56,6 @@ GLsizeiptr GL::getSizeOfType(GLint type)
         case GL_INT_VEC3: return 3 * sizeof(GLint);
         case GL_INT_VEC4: return 4 * sizeof(GLint);
 
-        case GL_UNSIGNED_INT: return sizeof(GLuint);
-        case GL_UNSIGNED_INT_VEC2: return 2 * sizeof(GLuint);
-        case GL_UNSIGNED_INT_VEC3: return 3 * sizeof(GLuint);
-        case GL_UNSIGNED_INT_VEC4: return 4 * sizeof(GLuint);
-
         case GL_BOOL: return sizeof(GLboolean);
         case GL_BOOL_VEC2: return 2 * sizeof(GLboolean);
         case GL_BOOL_VEC3: return 3 * sizeof(GLboolean);

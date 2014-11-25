@@ -47,6 +47,6 @@ namespace React
             setName(name);
         }
     };
- }
+}
 
 #endif
