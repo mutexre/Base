@@ -3,6 +3,10 @@
 
 @implementation GLView
 
+- (BOOL)isAnimating { return YES; }
+- (void)startAnimation {}
+- (void)stopAnimation {}
+
 //
 // Overriden methods
 //

@@ -13,6 +13,10 @@
     bool needToSetCGLContextInDisplayLink;
 }
 
+- (BOOL)isAnimating;
+- (void)startAnimation;
+- (void)stopAnimation;
+
 // Overriden methods
 - (void)awakeFromNib;
 - (BOOL)acceptsFirstResponder;
