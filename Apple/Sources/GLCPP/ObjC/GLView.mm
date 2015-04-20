@@ -18,7 +18,7 @@
     needToSetCGLContextInDisplayLink = true;
 
     auto pixelFormat = [self selectPixelFormat];
-    NSOpenGLContext* context = [[NSOpenGLContext alloc] initWithFormat:pixelFormat shareContext:0];
+    NSOpenGLContext* context = [[NSOpenGLContext alloc] initWithFormat:pixelFormat shareContext:nil];
     cglContext = (CGLContextObj)[context CGLContextObj];
     CGLEnable((CGLContextObj)[context CGLContextObj], kCGLCECrashOnRemovedFunctions);
 
