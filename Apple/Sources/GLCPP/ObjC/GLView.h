@@ -47,9 +47,8 @@
 
 // Override in subclasses
 - (NSOpenGLPixelFormat*)selectPixelFormat;
-- (void)setGLOptions;
-- (void)onGlReady;
-- (void)prepareScene;
+- (void)configure;
+- (void)setTime:(Rt::u8)t;
 - (void)drawScene;
 - (void)reshape:(NSSize)size;
 - (void)scroll:(float)x y:(float)y dx:(float)dx dy:(float)dy event:(NSEvent*)event;

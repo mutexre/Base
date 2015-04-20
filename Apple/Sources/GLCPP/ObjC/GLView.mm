@@ -47,8 +47,7 @@
     [[self openGLContext] makeCurrentContext];
 
     GL::printInfo();
-    [self setGLOptions];
-    [self onGlReady];
+    [self configure];
 
     [self prepareDisplayLink];
 }
@@ -85,7 +84,7 @@ static CVReturn displayLinkCallback(CVDisplayLinkRef displayLink,
     }
 
 //    auto dt = (lastTime != 0 ? outputTime->videoTime - lastTime : 0);
-    [self prepareScene:outputTime->videoTime];
+    [self setTime:outputTime->videoTime];
 
 #if 0
     NSLog(@"%u %d %lld %llu %lf %lld %llu",
@@ -258,7 +257,7 @@ static CVReturn displayLinkCallback(CVDisplayLinkRef displayLink,
 
 - (void)move:(float)x y:(float)y dx:(float)dx dy:(float)dy event:(NSEvent*)event {}
 
-- (void)setGLOptions
+- (void)configure
 {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_DEPTH_CLAMP);
@@ -302,9 +301,7 @@ static CVReturn displayLinkCallback(CVDisplayLinkRef displayLink,
     glClearColor(c, c, c, 1.0f);
 }
 
-- (void)onGlReady {}
-
-- (void)prepareScene:(Rt::u8)dt {
+- (void)setTime:(Rt::u8)t {
 }
 
 - (void)drawScene {
