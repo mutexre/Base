@@ -21,6 +21,9 @@
         typedef uint64_t u8;
         typedef int64_t s8;
         typedef	uint8_t uuid[16];
+        
+        using f4 = float;
+        using f8 = double;
 
         template <typename T>
         class StrideOffset
@@ -58,6 +61,9 @@
         typedef uint64_t u8;
         typedef int64_t s8;
         typedef	uint8_t uuid[16];
+
+        using f4 = float;
+        using f8 = double;
 
         template <typename T>
         class StrideOffset
