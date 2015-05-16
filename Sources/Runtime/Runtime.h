@@ -17,6 +17,7 @@
 #include <Runtime/Test/Test.h>
 #include <Runtime/Range.h>
 #include <Runtime/Bit.h>
+#include <Runtime/Float.h>
 #include <Runtime/Subroutines.h>
 #include <Runtime/AlignedAllocator.h>
 
