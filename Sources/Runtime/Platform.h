@@ -12,18 +12,17 @@
 
     namespace Rt
     {
-        typedef uint8_t u1;
-        typedef int8_t s1;
-        typedef uint16_t u2;
-        typedef int16_t s2;
-        typedef uint32_t u4;
-        typedef int32_t s4;
-        typedef uint64_t u8;
-        typedef int64_t s8;
-        typedef	uint8_t uuid[16];
-        
+        using u1 = uint8_t;
+        using s1 = int8_t;
+        using u2 = uint16_t;
+        using s2 = int16_t;
+        using u4 = uint32_t;
+        using s4 = int32_t;
+        using u8 = uint64_t;
+        using s8 = int64_t;
         using f4 = float;
         using f8 = double;
+        using uuid = uint8_t[16];
 
         template <typename T>
         class StrideOffset
@@ -52,18 +51,17 @@
 
     namespace Rt
     {
-        typedef uint8_t u1;
-        typedef int8_t s1;
-        typedef uint16_t u2;
-        typedef int16_t s2;
-        typedef uint32_t u4;
-        typedef int32_t s4;
-        typedef uint64_t u8;
-        typedef int64_t s8;
-        typedef	uint8_t uuid[16];
-
+        using u1 = uint8_t;
+        using s1 = int8_t;
+        using u2 = uint16_t;
+        using s2 = int16_t;
+        using u4 = uint32_t;
+        using s4 = int32_t;
+        using u8 = uint64_t;
+        using s8 = int64_t;
         using f4 = float;
         using f8 = double;
+        using uuid = uint8_t[16];
 
         template <typename T>
         class StrideOffset
