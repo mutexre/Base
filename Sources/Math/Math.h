@@ -34,6 +34,8 @@ namespace Math
 #endif
 
 #include <Math/Rational.h>
+#include <Math/GCD.h>
+#include <Math/LCM.h>
 
 #include <Math/Vector.h>
 #include <Math/Vertex.h>
