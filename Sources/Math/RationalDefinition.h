@@ -218,15 +218,33 @@ inline const Rational<T>& Rational<T>::operator--()
 template <typename T>
 inline bool Rational<T>::operator<(const Rational& rational) const
 {
-    //TODO
-    return true;
+    if (b * rational.b > 0)
+        return a * rational.b - b * rational.a > 0;
+    return a * rational.b - b * rational.a < 0;
+}
+
+template <typename T>
+inline bool Rational<T>::operator<=(const Rational& rational) const
+{
+    if (b * rational.b > 0)
+        return a * rational.b - b * rational.a >= 0;
+    return a * rational.b - b * rational.a <= 0;
 }
 
 template <typename T>
 inline bool Rational<T>::operator>(const Rational& rational) const
 {
-    //TODO
-    return true;
+    if (b * rational.b > 0)
+        return a * rational.b - b * rational.a < 0;
+    return a * rational.b - b * rational.a > 0;
+}
+
+template <typename T>
+inline bool Rational<T>::operator>=(const Rational& rational) const
+{
+    if (b * rational.b > 0)
+        return a * rational.b - b * rational.a <= 0;
+    return a * rational.b - b * rational.a >= 0;
 }
 
 template <typename T>
@@ -264,9 +282,21 @@ inline bool Rational<T>::operator<(T n) const
 }
 
 template <typename T>
+inline bool Rational<T>::operator<=(T n) const
+{
+    return a <= n * b;
+}
+
+template <typename T>
 inline bool Rational<T>::operator>(T n) const
 {
     return a > n * b;
+}
+
+template <typename T>
+inline bool Rational<T>::operator>=(T n) const
+{
+    return a >= n * b;
 }
 
 template <typename T>

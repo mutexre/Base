@@ -47,11 +47,15 @@ namespace Math
         bool operator!() const { return !a; }
 
         bool operator<(const Rational& rational) const;
+        bool operator<=(const Rational& rational) const;
         bool operator>(const Rational& rational) const;
+        bool operator>=(const Rational& rational) const;
         bool operator==(const Rational& rational) const;
 
         bool operator<(T n) const;
+        bool operator<=(T n) const;
         bool operator>(T n) const;
+        bool operator>=(T n) const;
         bool operator==(T n) const;
 
         static Rational float2rational(float f);
