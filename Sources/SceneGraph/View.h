@@ -146,7 +146,7 @@ namespace SG
 
                 auto iter = visibility.object.find(object);
                 if (iter != visibility.object.end())
-                    objectVisible = iter->second->get();
+                    objectVisible = iter->second->value();
 
                 if (objectVisible)
                     for (auto& segment : object->value()->getSegments()) {
@@ -154,7 +154,7 @@ namespace SG
 
                         auto iter = visibility.segment.find(std::make_pair(object, segment));
                         if (iter != visibility.segment.end())
-                            segmentVisible = iter->second->get();
+                            segmentVisible = iter->second->value();
 
                         if (segmentVisible) {
                             auto& programValue = segment->getProgram()->value();
