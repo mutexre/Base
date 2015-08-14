@@ -3,7 +3,7 @@
 
 CONF=Release
 TARGET="OSX Static Library"
-SDK=macosx10.9
+SDK=macosx10.10
 ARCH=x86_64
 
 BOOST=../../boost
