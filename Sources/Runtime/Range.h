@@ -50,14 +50,17 @@ namespace Rt
             return !((b.b <= a.a) || (b.a >= a.b));
         }
 
-        inline Range intersection(const Range* range) const {
-            if ((range->b <= a) || (range->a >= b)) return Range(0, 0);
-            return Range(max(range->a, a), min(range->b, b) - max(range->a, a));
+        inline Option<Range> intersection(T a, T b) const {
+            if ((b <= this->a) || (a >= this->b)) return Option<Range>();
+            return Option<Range>(Range(std::max(a, this->a), std::min(b, this->b) - std::max(a, this->a)));
         }
 
-        inline Range intersection(const Range range) const {
-            if ((range.b <= a) || (range.a >= b)) return Range(0, 0);
-            return Range(max(range.a, a), min(range.b, b) - max(range.a, a));
+        inline Option<Range> intersection(const Range* range) const {
+            return intersection(range->a, range->b);
+        }
+
+        inline Option<Range> intersection(const Range range) const {
+            return intersection(range.a, range.b);
         }
 
         inline void intersectWith(T _a, T _b) {
