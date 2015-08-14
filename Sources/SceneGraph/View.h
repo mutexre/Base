@@ -13,11 +13,11 @@ namespace SG
         GL::Viewport viewport;
 
         struct Visibility {
-            using _Object = std::map<ObjectPtr, React::ScalarPtr<bool>>;
-            using _Segment = std::map<std::pair<ObjectPtr, std::shared_ptr<Segment>>, React::ScalarPtr<bool>>;
+            using Object = std::map<ObjectPtr, React::ScalarPtr<bool>>;
+            using Segment = std::map<std::pair<ObjectPtr, std::shared_ptr<Segment>>, React::ScalarPtr<bool>>;
 
-            _Object object;
-            _Segment segment;
+            Object object;
+            Segment segment;
         }
         visibility;
 
@@ -58,19 +58,19 @@ namespace SG
             order->addObserver(ObjectsOrder::Signal::slot_type(&View::orderObjects, this, _1).track_foreign(shared_from_this()));
         }
 
-        Visibility::_Object& getObjectsVisibility() {
+        Visibility::Object& getObjectsVisibility() {
             return visibility.object;
         }
 
-        void setObjectsVisibility(Visibility::_Object visibility) {
+        void setObjectsVisibility(Visibility::Object visibility) {
             this->visibility.object = visibility;
         }
 
-        Visibility::_Segment getSegmentVisibility() {
+        Visibility::Segment getSegmentVisibility() {
             return visibility.segment;
         }
 
-        void setSegmentVisibility(Visibility::_Segment visibility) {
+        void setSegmentVisibility(Visibility::Segment visibility) {
             this->visibility.segment = visibility;
         }
 
