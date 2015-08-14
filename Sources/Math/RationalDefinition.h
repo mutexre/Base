@@ -152,21 +152,21 @@ inline Rational<T>& Rational<T>::operator/=(T n)
 template <typename T>
 inline Rational<T>& Rational<T>::add(T n)
 {
-    add(CRational(n));
+    add(Rational(n));
     return *this;
 }
 
 template <typename T>
 inline Rational<T>& Rational<T>::sub(T n)
 {
-    sub(CRational(n));
+    sub(Rational(n));
     return *this;
 }
 
 template <typename T>
 inline Rational<T>& Rational<T>::mul(T n)
 {
-    mul(CRational(n));
+    mul(Rational(n));
     return *this;
 }
 

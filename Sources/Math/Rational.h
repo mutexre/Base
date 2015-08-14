@@ -64,6 +64,26 @@ namespace Math
         void normalize();
     };
 
+    template <typename T = int>
+    Rational<T> operator+(const Rational<T>& x, const Rational<T>& y) {
+        return Rational<T>(x.a * y.b + x.b * y.a, x.b * y.b);
+    }
+
+    template <typename T = int>
+    Rational<T> operator-(const Rational<T>& x, const Rational<T>& y) {
+        return Rational<T>(x.a * y.b - x.b * y.a, x.b * y.b);
+    }
+
+    template <typename T = int>
+    Rational<T> operator*(const Rational<T>& x, const Rational<T>& y) {
+        return Rational<T>(x.a * y.a, x.b * y.b);
+    }
+
+    template <typename T = int>
+    Rational<T> operator/(const Rational<T>& x, const Rational<T>& y) {
+        return Rational<T>(x.a * y.b, x.b * y.a);
+    }
+
     #include <Math/RationalDefinition.h>
 }
 
