@@ -7,7 +7,7 @@ namespace React
     class Multiply : public Transform<Multiply<T>>
     {
         REACT_DEFINE_VECTOR_INPUT(ScalarPtr<T>, input, getInput, setInput, addInput, &Multiply::invalidate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &Multiply::evaluate)
+        DF_OUT(ScalarPtr<T>, output, getOutput, setOutput, &Multiply::evaluate)
 
     protected:
         void evaluate() {

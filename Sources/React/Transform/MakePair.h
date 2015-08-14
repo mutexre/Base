@@ -8,9 +8,9 @@ namespace React
     {
         using OutputType = std::pair<T1, T2>;
 
-        REACT_DEFINE_INPUT(ScalarPtr<T1>, first, getFirst, setFirst, &MakePair::invalidate)
-        REACT_DEFINE_INPUT(ScalarPtr<T1>, second, getSecond, setSecond, &MakePair::invalidate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<OutputType>, output, getOutput, setOutput, &MakePair::evaluate)
+        DF_IN(ScalarPtr<T1>, first, getFirst, setFirst, &MakePair::invalidate)
+        DF_IN(ScalarPtr<T1>, second, getSecond, setSecond, &MakePair::invalidate)
+        DF_OUT(ScalarPtr<OutputType>, output, getOutput, setOutput, &MakePair::evaluate)
 
     private:
         void invalidate() {

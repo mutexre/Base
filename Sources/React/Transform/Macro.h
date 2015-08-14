@@ -115,4 +115,7 @@ public:\
     REACT_DEFINE_OUTPUT_VECTOR_SETTER(type, var, setter, evalFunc)\
     REACT_DEFINE_OUTPUT_VECTOR_ADDER(type, var, adder, evalFunc)
 
+#define DF_IN(type, var, getter, setter, invalidator) REACT_DEFINE_INPUT(type, var, getter, setter, invalidator)
+#define DF_OUT(type, var, getter, setter, evalFunc) REACT_DEFINE_OUTPUT(type, var, getter, setter, evalFunc)
+
 #endif

@@ -16,10 +16,10 @@ namespace SG
         template <typename D = Rt::u1, typename I = Rt::u4>
         class Cpu2GpuProjection : public React::Transform<Cpu2GpuProjection<D, I>>
         {
-            REACT_DEFINE_INPUT(React::ScalarPtr<PrimitivesStream<I>>, primitivesStream, getPrimitivesStream, setPrimitivesStream, &Cpu2GpuProjection::invalidate)
-            REACT_DEFINE_INPUT(React::ScalarPtr<Attributes>, attrs, getAttrs, setAttrs, &Cpu2GpuProjection::invalidate)
-            REACT_DEFINE_OUTPUT(React::ScalarPtr<std::shared_ptr<SG::Data>>, data, getData, setData, &Cpu2GpuProjection::evaluate)
-            REACT_DEFINE_OUTPUT(React::ScalarPtr<std::shared_ptr<SG::DrawCall>>, drawCall, getDrawCall, setDrawCall, &Cpu2GpuProjection::evaluate)
+            DF_IN(React::ScalarPtr<PrimitivesStream<I>>, primitivesStream, getPrimitivesStream, setPrimitivesStream, &Cpu2GpuProjection::invalidate)
+            DF_IN(React::ScalarPtr<Attributes>, attrs, getAttrs, setAttrs, &Cpu2GpuProjection::invalidate)
+            DF_OUT(React::ScalarPtr<std::shared_ptr<SG::Data>>, data, getData, setData, &Cpu2GpuProjection::evaluate)
+            DF_OUT(React::ScalarPtr<std::shared_ptr<SG::DrawCall>>, drawCall, getDrawCall, setDrawCall, &Cpu2GpuProjection::evaluate)
 
         private:
             D dim;

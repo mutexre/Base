@@ -8,8 +8,8 @@ namespace React
         template <typename T>
         class GetY : public Transform<GetY<T>>
         {
-            REACT_DEFINE_INPUT(ScalarPtr<Math::Vector<T>>, input, getInput, setInput, &GetY::invalidate)
-            REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &GetY::evaluate)
+            DF_IN(ScalarPtr<Math::Vector<T>>, input, getInput, setInput, &GetY::invalidate)
+            DF_OUT(ScalarPtr<T>, output, getOutput, setOutput, &GetY::evaluate)
 
         protected:
             void evaluate() {

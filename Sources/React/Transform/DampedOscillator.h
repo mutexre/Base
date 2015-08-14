@@ -6,15 +6,15 @@ namespace React
     template <typename T, typename F>
     class DampedOscillator : public Transform<DampedOscillator<T, F>>
     {
-        REACT_DEFINE_INPUT(ScalarPtr<T>, timeSource, getTimeSource, setTimeSource, &DampedOscillator::invalidateTimeDependants)
-        REACT_DEFINE_INPUT(ScalarPtr<F>, m, getM, setM, &DampedOscillator::invalidateOthers)
-        REACT_DEFINE_INPUT(ScalarPtr<F>, k, getK, setK, &DampedOscillator::invalidateOthers)
-        REACT_DEFINE_INPUT(ScalarPtr<F>, c, getC, setC, &DampedOscillator::invalidateOthers)
-        REACT_DEFINE_INPUT(ScalarPtr<F>, g, getG, setG, &DampedOscillator::invalidateOthers)
-        REACT_DEFINE_INPUT(ScalarPtr<F>, x0, getX0, setX0, &DampedOscillator::invalidateOthers)
-        REACT_DEFINE_INPUT(ScalarPtr<F>, v0, getV0, setV0, &DampedOscillator::invalidateOthers)
-        REACT_DEFINE_OUTPUT(ScalarPtr<F>, x, getX, setX, &DampedOscillator::evaluateTimeDependants)
-        REACT_DEFINE_OUTPUT(ScalarPtr<F>, finalDisplacement, getFinalDisplacement, setFinalDisplacement, &DampedOscillator::evaluateOthers)
+        DF_IN(ScalarPtr<T>, timeSource, getTimeSource, setTimeSource, &DampedOscillator::invalidateTimeDependants)
+        DF_IN(ScalarPtr<F>, m, getM, setM, &DampedOscillator::invalidateOthers)
+        DF_IN(ScalarPtr<F>, k, getK, setK, &DampedOscillator::invalidateOthers)
+        DF_IN(ScalarPtr<F>, c, getC, setC, &DampedOscillator::invalidateOthers)
+        DF_IN(ScalarPtr<F>, g, getG, setG, &DampedOscillator::invalidateOthers)
+        DF_IN(ScalarPtr<F>, x0, getX0, setX0, &DampedOscillator::invalidateOthers)
+        DF_IN(ScalarPtr<F>, v0, getV0, setV0, &DampedOscillator::invalidateOthers)
+        DF_OUT(ScalarPtr<F>, x, getX, setX, &DampedOscillator::evaluateTimeDependants)
+        DF_OUT(ScalarPtr<F>, finalDisplacement, getFinalDisplacement, setFinalDisplacement, &DampedOscillator::evaluateOthers)
 
     public:
         enum class Behaviour {
@@ -23,7 +23,7 @@ namespace React
             over
         };
 
-        REACT_DEFINE_OUTPUT(ScalarPtr<Behaviour>, behaviour, getBehaviour, setBehaviour, &DampedOscillator::evaluateOthers)
+        DF_OUT(ScalarPtr<Behaviour>, behaviour, getBehaviour, setBehaviour, &DampedOscillator::evaluateOthers)
 
     private:
         F discriminant, coeff[3], l[2];

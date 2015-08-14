@@ -7,7 +7,7 @@ namespace React
     class Add : public Transform<Add<T>>
     {
         REACT_DEFINE_VECTOR_INPUT(ScalarPtr<T>, input, getInput, setInput, addInput, &Add::invalidate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &Add::evaluate)
+        DF_OUT(ScalarPtr<T>, output, getOutput, setOutput, &Add::evaluate)
 
     protected:
         void evaluate() {

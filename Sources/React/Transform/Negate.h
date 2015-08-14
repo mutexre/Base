@@ -6,8 +6,8 @@ namespace React
     template <typename T>
     class Negate : public Transform<Negate<T>>
     {
-        REACT_DEFINE_INPUT(ScalarPtr<T>, input, getInput, setInput, &Negate::invalidate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &Negate::evaluate)
+        DF_IN(ScalarPtr<T>, input, getInput, setInput, &Negate::invalidate)
+        DF_OUT(ScalarPtr<T>, output, getOutput, setOutput, &Negate::evaluate)
 
     protected:
         void evaluate() {

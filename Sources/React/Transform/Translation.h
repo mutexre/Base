@@ -6,10 +6,10 @@ namespace React
     template <typename T>
     class Translation : public Transform<Translation<T>>
     {
-        REACT_DEFINE_INPUT(ScalarPtr<T>, x, getX, setX, &Translation::invalidate)
-        REACT_DEFINE_INPUT(ScalarPtr<T>, y, getY, setY, &Translation::invalidate)
-        REACT_DEFINE_INPUT(ScalarPtr<T>, z, getZ, setZ, &Translation::invalidate)
-        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &Translation::evaluate)
+        DF_IN(ScalarPtr<T>, x, getX, setX, &Translation::invalidate)
+        DF_IN(ScalarPtr<T>, y, getY, setY, &Translation::invalidate)
+        DF_IN(ScalarPtr<T>, z, getZ, setZ, &Translation::invalidate)
+        DF_OUT(MatrixPtr<T>, output, getOutput, setOutput, &Translation::evaluate)
 
     protected:
         void evaluate() {

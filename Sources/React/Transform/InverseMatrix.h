@@ -6,8 +6,8 @@ namespace React
     template <typename T>
     class InverseMatrix : public Transform<InverseMatrix<T>>
     {
-        REACT_DEFINE_INPUT(MatrixPtr<T>, input, getInput, setInput, &InverseMatrix::invalidate)
-        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &InverseMatrix::evaluate)
+        DF_IN(MatrixPtr<T>, input, getInput, setInput, &InverseMatrix::invalidate)
+        DF_OUT(MatrixPtr<T>, output, getOutput, setOutput, &InverseMatrix::evaluate)
 
     protected:
         void evaluate() {

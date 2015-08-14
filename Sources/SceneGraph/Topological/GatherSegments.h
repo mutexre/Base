@@ -7,13 +7,13 @@ namespace SG
     {
         class GatherSegments : public React::Transform<GatherSegments>
         {
-            REACT_DEFINE_INPUT(React::ScalarPtr<bool>, enable0, getEneble0, setEnable0, &GatherSegments::invalidate)
-            REACT_DEFINE_INPUT(React::ScalarPtr<bool>, enable1, getEneble1, setEnable1, &GatherSegments::invalidate)
-            REACT_DEFINE_INPUT(React::ScalarPtr<bool>, enable2, getEneble2, setEnable2, &GatherSegments::invalidate)
-            REACT_DEFINE_INPUT(React::ScalarPtr<std::shared_ptr<Segment>>, segment0, getSegment0, setSegment0, &GatherSegments::invalidate)
-            REACT_DEFINE_INPUT(React::ScalarPtr<std::shared_ptr<Segment>>, segment1, getSegment1, setSegment1, &GatherSegments::invalidate)
-            REACT_DEFINE_INPUT(React::ScalarPtr<std::shared_ptr<Segment>>, segment2, getSegment2, setSegment2, &GatherSegments::invalidate)
-            REACT_DEFINE_OUTPUT(React::ScalarPtr<std::shared_ptr<SG::Object>>, object, getObject, setObject, &GatherSegments::evaluate)
+            DF_IN(React::ScalarPtr<bool>, enable0, getEnable0, setEnable0, &GatherSegments::invalidate)
+            DF_IN(React::ScalarPtr<bool>, enable1, getEnable1, setEnable1, &GatherSegments::invalidate)
+            DF_IN(React::ScalarPtr<bool>, enable2, getEnable2, setEnable2, &GatherSegments::invalidate)
+            DF_IN(React::ScalarPtr<std::shared_ptr<Segment>>, segment0, getSegment0, setSegment0, &GatherSegments::invalidate)
+            DF_IN(React::ScalarPtr<std::shared_ptr<Segment>>, segment1, getSegment1, setSegment1, &GatherSegments::invalidate)
+            DF_IN(React::ScalarPtr<std::shared_ptr<Segment>>, segment2, getSegment2, setSegment2, &GatherSegments::invalidate)
+            DF_OUT(React::ScalarPtr<std::shared_ptr<SG::Object>>, object, getObject, setObject, &GatherSegments::evaluate)
 
         private:
             std::vector<std::shared_ptr<SG::Segment>> segments;

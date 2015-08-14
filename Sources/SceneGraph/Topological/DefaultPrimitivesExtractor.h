@@ -11,10 +11,10 @@ namespace SG
             using Topology = std::shared_ptr<Math::Geometry::Topology<D, I>>;
             using AttributesMappingTypes = std::map<std::string, AttributesMappingType>;
 
-            REACT_DEFINE_INPUT(React::ScalarPtr<Topology>, topology, getTopology, setTopology, &DefaultPrimitivesExtractor::invalidate)
-            REACT_DEFINE_INPUT(React::ScalarPtr<AttributesMappingTypes>, attributesMappingTypes, getAttributesMappingTypes, setAttributesMappingTypes, &DefaultPrimitivesExtractor::invalidate)
-            REACT_DEFINE_OUTPUT(React::ScalarPtr<std::shared_ptr<PrimitivesStream<I>>>, primitivesStream, getPrimitivesStream, setPrimitivesStream, &DefaultPrimitivesExtractor::evaluate)
-            REACT_DEFINE_OUTPUT(React::ScalarPtr<std::shared_ptr<AttributesMapping<I>>>, attributesMappings, getAttributesMappings, setAttributesMappings, &DefaultPrimitivesExtractor::evaluate)
+            DF_IN(React::ScalarPtr<Topology>, topology, getTopology, setTopology, &DefaultPrimitivesExtractor::invalidate)
+            DF_IN(React::ScalarPtr<AttributesMappingTypes>, attributesMappingTypes, getAttributesMappingTypes, setAttributesMappingTypes, &DefaultPrimitivesExtractor::invalidate)
+            DF_OUT(React::ScalarPtr<std::shared_ptr<PrimitivesStream<I>>>, primitivesStream, getPrimitivesStream, setPrimitivesStream, &DefaultPrimitivesExtractor::evaluate)
+            DF_OUT(React::ScalarPtr<std::shared_ptr<AttributesMapping<I>>>, attributesMappings, getAttributesMappings, setAttributesMappings, &DefaultPrimitivesExtractor::evaluate)
 
         private:
             D dim;

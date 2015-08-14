@@ -6,8 +6,8 @@ namespace React
     template <typename T>
     class MultiplyByScalar : public Transform<MultiplyByScalar<T>>
     {
-        REACT_DEFINE_INPUT(ScalarPtr<T>, input, getInput, setInput, &MultiplyByScalar::invalidate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &MultiplyByScalar::evaluate)
+        DF_IN(ScalarPtr<T>, input, getInput, setInput, &MultiplyByScalar::invalidate)
+        DF_OUT(ScalarPtr<T>, output, getOutput, setOutput, &MultiplyByScalar::evaluate)
 
     protected:
         T multiplier;

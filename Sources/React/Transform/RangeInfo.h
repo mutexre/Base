@@ -6,10 +6,10 @@ namespace React
     template <typename T>
     class RangeInfo : public Transform<RangeInfo<T>>
     {
-        REACT_DEFINE_INPUT(ScalarPtr<Rt::Range<T>>, range, getRange, setRange, &RangeInfo::invalidate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<T>, a, getA, setA, &RangeInfo::evaluate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<T>, b, getB, setB, &RangeInfo::evaluate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<T>, length, getLength, setLength, &RangeInfo::evaluate)
+        DF_IN(ScalarPtr<Rt::Range<T>>, range, getRange, setRange, &RangeInfo::invalidate)
+        DF_OUT(ScalarPtr<T>, a, getA, setA, &RangeInfo::evaluate)
+        DF_OUT(ScalarPtr<T>, b, getB, setB, &RangeInfo::evaluate)
+        DF_OUT(ScalarPtr<T>, length, getLength, setLength, &RangeInfo::evaluate)
 
     private:
         void evaluate() {

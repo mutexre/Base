@@ -8,9 +8,9 @@ namespace React
         template <typename T>
         class And : public Transform<And<T>>
         {
-            REACT_DEFINE_INPUT(ScalarPtr<T>, a, getA, setA, &And::invalidate)
-            REACT_DEFINE_INPUT(ScalarPtr<T>, b, getB, setB, &And::invalidate)
-            REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &And::evaluate)
+            DF_IN(ScalarPtr<T>, a, getA, setA, &And::invalidate)
+            DF_IN(ScalarPtr<T>, b, getB, setB, &And::invalidate)
+            DF_OUT(ScalarPtr<T>, output, getOutput, setOutput, &And::evaluate)
 
         protected:
             void evaluate() {

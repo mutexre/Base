@@ -6,8 +6,8 @@ namespace React
     template <typename T, typename I = Rt::u1>
     class SubMatrix : public Transform<SubMatrix<T, I>>
     {
-        REACT_DEFINE_INPUT(MatrixPtr<T>, input, getInput, setInput, &SubMatrix::invalidate)
-        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &SubMatrix::evaluate)
+        DF_IN(MatrixPtr<T>, input, getInput, setInput, &SubMatrix::invalidate)
+        DF_OUT(MatrixPtr<T>, output, getOutput, setOutput, &SubMatrix::evaluate)
 
     protected:
         I size, rowOffset, columnOffset;

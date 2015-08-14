@@ -6,8 +6,8 @@ namespace React
     template <typename A, typename B>
     class Forward : public Transform<Forward<A, B>>
     {
-        REACT_DEFINE_INPUT(ScalarPtr<A>, input, getInput, setInput, &Forward::invalidate)
-        REACT_DEFINE_OUTPUT(ScalarPtr<B>, output, getOutput, setOutput, &Forward::evaluate)
+        DF_IN(ScalarPtr<A>, input, getInput, setInput, &Forward::invalidate)
+        DF_OUT(ScalarPtr<B>, output, getOutput, setOutput, &Forward::evaluate)
 
     private:
         void invalidate() {

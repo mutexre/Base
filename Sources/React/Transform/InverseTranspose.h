@@ -6,8 +6,8 @@ namespace React
     template <typename T>
     class InverseTranspose : public Transform<InverseTranspose<T>>
     {
-        REACT_DEFINE_INPUT(MatrixPtr<T>, input, getInput, setInput, &InverseTranspose::invalidate)
-        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &InverseTranspose::evaluate)
+        DF_IN(MatrixPtr<T>, input, getInput, setInput, &InverseTranspose::invalidate)
+        DF_OUT(MatrixPtr<T>, output, getOutput, setOutput, &InverseTranspose::evaluate)
 
     protected:
         void evaluate() {

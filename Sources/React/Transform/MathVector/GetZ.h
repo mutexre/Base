@@ -8,8 +8,8 @@ namespace React
         template <typename T>
         class GetZ : public Transform<GetZ<T>>
         {
-            REACT_DEFINE_INPUT(ScalarPtr<Math::Vector<T>>, input, getInput, setInput, &GetZ::invalidate)
-            REACT_DEFINE_OUTPUT(ScalarPtr<T>, output, getOutput, setOutput, &GetZ::evaluate)
+            DF_IN(ScalarPtr<Math::Vector<T>>, input, getInput, setInput, &GetZ::invalidate)
+            DF_OUT(ScalarPtr<T>, output, getOutput, setOutput, &GetZ::evaluate)
 
         protected:
             void evaluate() {

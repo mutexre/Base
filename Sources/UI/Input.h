@@ -21,7 +21,7 @@ namespace UI
         cmd
     };
     
-    void convertKeyCode(Rt::Option<Key>, Rt::Option<std::string>);
+//    void convertKeyCode(Rt::Option<Key>, Rt::Option<std::string>);
 }
 
 #endif

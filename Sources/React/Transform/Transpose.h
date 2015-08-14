@@ -6,8 +6,8 @@ namespace React
     template <typename T>
     class Transpose : public Transform<Transpose<T>>
     {
-        REACT_DEFINE_INPUT(MatrixPtr<T>, input, getInput, setInput, &Transpose::invalidate)
-        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &Transpose::evaluate)
+        DF_IN(MatrixPtr<T>, input, getInput, setInput, &Transpose::invalidate)
+        DF_OUT(MatrixPtr<T>, output, getOutput, setOutput, &Transpose::evaluate)
 
     protected:
         void evaluate() {

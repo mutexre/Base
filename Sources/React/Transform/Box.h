@@ -3,11 +3,12 @@
 
 namespace React
 {
+// Consider renaming to MakeMatrix & MakeScalar
     template <typename T>
     class Box : public Transform<Box<T>>
     {
-        REACT_DEFINE_INPUT(ScalarPtr<T>, input, getInput, setInput, &Box::invalidate)
-        REACT_DEFINE_OUTPUT(MatrixPtr<T>, output, getOutput, setOutput, &Box::evaluate)
+        DF_IN(ScalarPtr<T>, input, getInput, setInput, &Box::invalidate)
+        DF_OUT(MatrixPtr<T>, output, getOutput, setOutput, &Box::evaluate)
 
     protected:
         void evaluate() {
