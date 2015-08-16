@@ -21,7 +21,7 @@ namespace SG
             TriangleStripsWithAdjacency
         };
 
-        using Vertices = std::vector<I>:
+        using Vertices = std::vector<I>;
 
     private:
         Mode mode;
