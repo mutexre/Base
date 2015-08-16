@@ -21,14 +21,16 @@ namespace SG
             TriangleStripsWithAdjacency
         };
 
+        using Vertices = std::vector<I>:
+
     private:
         Mode mode;
-        std::vector<I> vertices;
+        Vertices vertices;
         Rt::Option<I> restartIndex;
 
     public:
         PrimitivesStream(Mode mode,
-                         const std::vector<I>& vertices,
+                         const Vertices& vertices,
                          Rt::Option<I> restartIndex = Rt::Option<I>())
         {
             setMode(mode);
@@ -44,15 +46,15 @@ namespace SG
             this->mode = mode;
         }
 
-        const std::vector<Rt::u4>& getVertices() const {
+        const Vertices& getVertices() const {
             return vertices;
         }
 
-        std::vector<Rt::u4>& getVertices() {
+        Vertices& getVertices() {
             return vertices;
         }
 
-        void setVertices(const std::vector<I>& vertices) {
+        void setVertices(const Vertices& vertices) {
             this->vertices = vertices;
         }
 
